@@ -36,9 +36,9 @@ variable "force_destroy" {
 
 variable "lifecycle_rules" {
   description = "Lifecycle rules for the bucket"
-  type        = list(object({
-    enabled    = bool
-    prefix     = string
+  type = list(object({
+    enabled                                = bool
+    prefix                                 = string
     abort_incomplete_multipart_upload_days = number
     expiration = object({
       days = number
@@ -48,19 +48,19 @@ variable "lifecycle_rules" {
       storage_class = string
     })
   }))
-  default     = []
+  default = []
 }
 
 variable "cors_rules" {
   description = "CORS rules for the bucket"
-  type        = list(object({
+  type = list(object({
     allowed_headers = list(string)
     allowed_methods = list(string)
     allowed_origins = list(string)
     expose_headers  = list(string)
     max_age_seconds = number
   }))
-  default     = []
+  default = []
 }
 
 variable "versioning" {

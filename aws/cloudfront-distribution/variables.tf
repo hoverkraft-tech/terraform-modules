@@ -37,23 +37,23 @@ variable "comment" {
 
 variable "custom_error_response" {
   description = "A custom error response element (multiples allowed)."
-  type        = list(object({
+  type = list(object({
     error_caching_min_ttl = number
     error_code            = number
     response_code         = number
     response_page_path    = string
   }))
-  default     = []
+  default = []
 }
 
 variable "default_cache_behavior" {
   description = "A default cache behavior element (required)."
-  type        = object({
-    allowed_methods        = list(string)
-    cached_methods         = list(string)
-    compress               = bool
-    default_ttl            = number
-    forwarded_values       = object({
+  type = object({
+    allowed_methods = list(string)
+    cached_methods  = list(string)
+    compress        = bool
+    default_ttl     = number
+    forwarded_values = object({
       cookies = object({
         forward           = string
         whitelisted_names = list(string)
@@ -68,12 +68,12 @@ variable "default_cache_behavior" {
     trusted_signers        = list(string)
     viewer_protocol_policy = string
   })
-  default     = {
-    allowed_methods        = ["GET", "HEAD", "OPTIONS"]
-    cached_methods         = ["GET", "HEAD", "OPTIONS"]
-    compress               = true
-    default_ttl            = 3600
-    forwarded_values       = {
+  default = {
+    allowed_methods = ["GET", "HEAD", "OPTIONS"]
+    cached_methods  = ["GET", "HEAD", "OPTIONS"]
+    compress        = true
+    default_ttl     = 3600
+    forwarded_values = {
       cookies = {
         forward           = "none"
         whitelisted_names = []
@@ -116,26 +116,26 @@ variable "http_version" {
 
 variable "logging_config" {
   description = "A logging configuration element (required)."
-  type        = object({
-    bucket        = string
+  type = object({
+    bucket          = string
     include_cookies = bool
-    prefix        = string
+    prefix          = string
   })
-  default     = {
-    bucket        = ""
+  default = {
+    bucket          = ""
     include_cookies = false
-    prefix        = ""
+    prefix          = ""
   }
 }
 
 variable "ordered_cache_behavior" {
   description = "An ordered cache behavior element (multiples allowed)."
-  type        = list(object({
-    allowed_methods        = list(string)
-    cached_methods         = list(string)
-    compress               = bool
-    default_ttl            = number
-    forwarded_values       = object({
+  type = list(object({
+    allowed_methods = list(string)
+    cached_methods  = list(string)
+    compress        = bool
+    default_ttl     = number
+    forwarded_values = object({
       cookies = object({
         forward           = string
         whitelisted_names = list(string)
@@ -151,12 +151,12 @@ variable "ordered_cache_behavior" {
     trusted_signers        = list(string)
     viewer_protocol_policy = string
   }))
-  default     = []
+  default = []
 }
 
 variable "origin" {
   description = "An origin element (multiples allowed)."
-  type        = list(object({
+  type = list(object({
     domain_name = string
     origin_id   = string
     http_port   = number
@@ -170,28 +170,28 @@ variable "origin" {
       origin_read_timeout      = number
       origin_ssl_protocols     = list(string)
     })
-    connection_attempts    = number
-    connection_timeout     = number
-    custom_header          = list(object({
+    connection_attempts = number
+    connection_timeout  = number
+    custom_header = list(object({
       name  = string
       value = string
     }))
     origin_keepalive_timeout = number
     origin_read_timeout      = number
-    origin_shield            = object({
-      enabled = bool
+    origin_shield = object({
+      enabled              = bool
       origin_shield_region = string
     })
     s3_origin_config = object({
       origin_access_identity = string
     })
   }))
-  default     = []
+  default = []
 }
 
 variable "origin_group" {
   description = "An origin group element (multiples allowed)."
-  type        = list(object({
+  type = list(object({
     failover_criteria = object({
       status_codes = list(number)
     })
@@ -200,7 +200,7 @@ variable "origin_group" {
     }))
     origin_id = string
   }))
-  default     = []
+  default = []
 }
 
 variable "price_class" {
@@ -211,13 +211,13 @@ variable "price_class" {
 
 variable "restrictions" {
   description = "A restriction element (required)."
-  type        = object({
+  type = object({
     geo_restriction = object({
       locations        = list(string)
       restriction_type = string
     })
   })
-  default     = {
+  default = {
     geo_restriction = {
       locations        = []
       restriction_type = "none"
@@ -227,19 +227,19 @@ variable "restrictions" {
 
 variable "viewer_certificate" {
   description = "The SSL configuration for this distribution (maximum one)."
-  type        = object({
-    acm_certificate_arn      = string
+  type = object({
+    acm_certificate_arn            = string
     cloudfront_default_certificate = bool
-    iam_certificate_id       = string
-    minimum_protocol_version = string
-    ssl_support_method       = string
+    iam_certificate_id             = string
+    minimum_protocol_version       = string
+    ssl_support_method             = string
   })
-  default     = {
-    acm_certificate_arn      = ""
+  default = {
+    acm_certificate_arn            = ""
     cloudfront_default_certificate = false
-    iam_certificate_id       = ""
-    minimum_protocol_version = "TLSv1"
-    ssl_support_method       = "sni-only"
+    iam_certificate_id             = ""
+    minimum_protocol_version       = "TLSv1"
+    ssl_support_method             = "sni-only"
   }
 }
 
