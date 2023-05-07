@@ -6,6 +6,7 @@ output "access_key" {
 output "secret_key" {
   description = "Secret key of the api key"
   value       = scaleway_iam_api_key.api_key.secret_key
+  sensitive   = true
 }
 
 output "id" {
