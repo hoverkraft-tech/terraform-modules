@@ -6,7 +6,7 @@ This module creates an EFS Access Point.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.3.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.30.0 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
 

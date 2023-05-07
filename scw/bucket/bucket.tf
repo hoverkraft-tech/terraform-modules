@@ -7,16 +7,16 @@ resource "scaleway_object_bucket" "bucket" {
   dynamic "lifecycle_rule" {
     for_each = var.lifecycle_rules
     content {
-      enabled    = lifecycle_rule.value.enabled
+      enabled = lifecycle_rule.value.enabled
       expiration {
         days = lifecycle_rule.value.expiration.days
       }
       transition {
-        days = lifecycle_rule.value.transition.days
+        days          = lifecycle_rule.value.transition.days
         storage_class = lifecycle_rule.value.transition.storage_class
       }
       abort_incomplete_multipart_upload_days = lifecycle_rule.value.abort_incomplete_multipart_upload_days
-      prefix     = lifecycle_rule.value.prefix
+      prefix                                 = lifecycle_rule.value.prefix
     }
   }
 
