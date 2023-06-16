@@ -5,7 +5,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "config" {
     for_each = var.rules
 
     content {
-      id     = rule.key
+      id     = lookup(rule.value.name, rule.key, null)
       status = rule.value.status
 
       dynamic "filter" {
