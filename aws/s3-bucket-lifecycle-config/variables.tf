@@ -27,28 +27,18 @@ variable "bucket_id" {
   type        = string
 }
 
-# exemple of rules :
-# (
-# "rule1" = {
-#  status = "Enabled"
-#  prefix = "test/"
-#  tag = {}
-#  transition = {
-#    "transition1" = {
-#      days = 30
-#      storage_class = "GLACIER"
-#    }
-#  }
-#  expiration = {
-#    "expiration1" = {
-#      date = "2020-01-01" (exclusive)
-#      days = 90           (exclusive)
-#    }
-#  }
-# }
-# )
+# example of rules :
+#  [
+#    {
+#      name   = "Default"
+#      status = "Enabled"
+#      expiration = {
+#        days = 30
+#      }
+#    },
+#  ]
 variable "rules" {
   description = "List of rules to apply to the bucket"
-  type        = list
+  type        = list(any)
   default     = []
 }
