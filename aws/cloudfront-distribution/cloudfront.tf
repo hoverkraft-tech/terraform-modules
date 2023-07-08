@@ -1,3 +1,7 @@
+resource "aws_cloudfront_origin_access_identity" "main" {
+  comment = "Origin Access Identity for CloudFront distribution (${var.name})"
+}
+
 resource "aws_cloudfront_distribution" "main" {
 
   aliases             = var.aliases
@@ -23,39 +27,39 @@ resource "aws_cloudfront_distribution" "main" {
   }
 
   dynamic "default_cache_behavior" {
-    for_each = var.default_cache_behavior
+    for_each = [var.default_cache_behavior]
     content {
-      allowed_methods = default_cache_behavior.value.allowed_methods
-      cached_methods  = default_cache_behavior.value.cached_methods
-      compress        = default_cache_behavior.value.compress
-      default_ttl     = default_cache_behavior.value.default_ttl
+      allowed_methods = try(default_cache_behavior.value.allowed_methods, ["GET", "POST", "HEAD", "OPTIONS"])
+      cached_methods  = try(default_cache_behavior.value.cached_methods, ["GET", "POST", "HEAD", "OPTIONS"])
+      compress        = try(default_cache_behavior.value.compress, false)
+      default_ttl     = try(default_cache_behavior.value.default_ttl, null)
       dynamic "forwarded_values" {
-        for_each = default_cache_behavior.value.forwarded_values
+        for_each = [try(default_cache_behavior.value.forwarded_values, null)]
         content {
           dynamic "cookies" {
-            for_each = forwarded_values.value.cookies
+            for_each = [try(forwarded_values.value.cookies, null)]
             content {
-              forward           = cookies.value.forward
-              whitelisted_names = cookies.value.whitelisted_names
+              forward           = try(cookies.value.forward, null)
+              whitelisted_names = try(cookies.value.whitelisted_names, null)
             }
           }
-          headers      = forwarded_values.value.headers
-          query_string = forwarded_values.value.query_string
+          headers      = try(forwarded_values.value.headers, false)
+          query_string = try(forwarded_values.value.query_string, false)
         }
       }
-      max_ttl                = default_cache_behavior.value.max_ttl
-      min_ttl                = default_cache_behavior.value.min_ttl
-      target_origin_id       = default_cache_behavior.value.target_origin_id
-      viewer_protocol_policy = default_cache_behavior.value.viewer_protocol_policy
+      max_ttl                = try(default_cache_behavior.value.max_ttl, 604800)
+      min_ttl                = try(default_cache_behavior.value.min_ttl, 0)
+      target_origin_id       = try(default_cache_behavior.value.target_origin_id)
+      viewer_protocol_policy = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
     }
   }
 
   dynamic "logging_config" {
-    for_each = var.logging_config
+    for_each = [var.logging_config]
     content {
-      bucket          = logging_config.value.bucket
-      include_cookies = logging_config.value.include_cookies
-      prefix          = logging_config.value.prefix
+      bucket          = try(logging_config.value.bucket, null)
+      include_cookies = try(logging_config.value.include_cookies, null)
+      prefix          = try(logging_config.value.prefix, null)
     }
   }
 
@@ -91,24 +95,24 @@ resource "aws_cloudfront_distribution" "main" {
   dynamic "origin" {
     for_each = var.origin
     content {
-      domain_name = origin.value.domain_name
-      origin_id   = origin.value.origin_id
-      origin_path = origin.value.origin_path
+      domain_name = try(origin.value.domain_name, null)
+      origin_id   = try(origin.value.origin_id, null)
+      origin_path = try(origin.value.origin_path, null)
       dynamic "custom_origin_config" {
-        for_each = origin.value.custom_origin_config
+        for_each = [try(origin.value.custom_origin_config, null)]
         content {
-          http_port                = custom_origin_config.value.http_port
-          https_port               = custom_origin_config.value.https_port
-          origin_keepalive_timeout = custom_origin_config.value.origin_keepalive_timeout
-          origin_protocol_policy   = custom_origin_config.value.origin_protocol_policy
-          origin_read_timeout      = custom_origin_config.value.origin_read_timeout
-          origin_ssl_protocols     = custom_origin_config.value.origin_ssl_protocols
+          http_port                = try(custom_origin_config.value.http_port, 80)
+          https_port               = try(custom_origin_config.value.https_port, 443)
+          origin_keepalive_timeout = try(custom_origin_config.value.origin_keepalive_timeout, 5)
+          origin_protocol_policy   = try(custom_origin_config.value.origin_protocol_policy, "match-viewer")
+          origin_read_timeout      = try(custom_origin_config.value.origin_read_timeout, 30)
+          origin_ssl_protocols     = try(custom_origin_config.value.origin_ssl_protocols, ["TLSv1.2"])
         }
       }
       dynamic "s3_origin_config" {
-        for_each = origin.value.s3_origin_config
+        for_each = [try(origin.value.s3_origin_config, null)]
         content {
-          origin_access_identity = s3_origin_config.value.origin_access_identity
+          origin_access_identity = aws_cloudfront_origin_access_identity.main.cloudfront_access_identity_path
         }
       }
     }
@@ -128,23 +132,23 @@ resource "aws_cloudfront_distribution" "main" {
   }
 
   dynamic "restrictions" {
-    for_each = var.restrictions
+    for_each = [var.restrictions]
     content {
       geo_restriction {
-        locations        = restrictions.value.geo_restriction.locations
-        restriction_type = restrictions.value.geo_restriction.restriction_type
+        locations        = try(restrictions.value.geo_restriction.locations, null)
+        restriction_type = try(restrictions.value.geo_restriction.restriction_type, null)
       }
     }
   }
 
   dynamic "viewer_certificate" {
-    for_each = var.viewer_certificate
+    for_each = [var.viewer_certificate]
     content {
-      acm_certificate_arn            = viewer_certificate.value.acm_certificate_arn
-      cloudfront_default_certificate = viewer_certificate.value.cloudfront_default_certificate
-      iam_certificate_id             = viewer_certificate.value.iam_certificate_id
-      minimum_protocol_version       = viewer_certificate.value.minimum_protocol_version
-      ssl_support_method             = viewer_certificate.value.ssl_support_method
+      acm_certificate_arn            = try(viewer_certificate.value.acm_certificate_arn, null)
+      cloudfront_default_certificate = try(viewer_certificate.value.cloudfront_default_certificate, false)
+      iam_certificate_id             = try(viewer_certificate.value.iam_certificate_id, null)
+      minimum_protocol_version       = try(viewer_certificate.value.minimum_protocol_version, null)
+      ssl_support_method             = try(viewer_certificate.value.ssl_support_method, "sni-only")
     }
   }
 
