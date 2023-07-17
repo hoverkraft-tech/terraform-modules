@@ -99,7 +99,7 @@ resource "aws_cloudfront_distribution" "main" {
       origin_id   = try(origin.value.origin_id, null)
       origin_path = try(origin.value.origin_path, null)
       dynamic "custom_origin_config" {
-        for_each = [try(origin.value.custom_origin_config, null)]
+        for_each = try([origin.value.custom_origin_config], [])
         content {
           http_port                = try(custom_origin_config.value.http_port, 80)
           https_port               = try(custom_origin_config.value.https_port, 443)
@@ -110,7 +110,7 @@ resource "aws_cloudfront_distribution" "main" {
         }
       }
       dynamic "s3_origin_config" {
-        for_each = [try(origin.value.s3_origin_config, null)]
+        for_each = try([origin.value.s3_origin_config], [])
         content {
           origin_access_identity = aws_cloudfront_origin_access_identity.main.cloudfront_access_identity_path
         }
