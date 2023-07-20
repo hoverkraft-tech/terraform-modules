@@ -58,7 +58,8 @@ repos:
       - id: terraform_tflint
         args:
           - "--args=--module"
-          - "--args=--config=.tflint.hcl"
+          - "--args=--config=__GIT_WORKING_DIR__/.tflint.hcl"
+          - --hook-config=--delegate-chdir
       - id: terraform_tfsec
       - id: terraform_checkov
         args:
