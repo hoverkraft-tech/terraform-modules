@@ -46,5 +46,12 @@ variable "root_directory" {
     })
     path = string
   })
-  default = null
+  default = {
+    creation_info = {
+      owner_gid   = 0
+      owner_uid   = 0
+      permissions = "755"
+    }
+    path = "/"
+  }
 }
