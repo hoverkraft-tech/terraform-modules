@@ -37,7 +37,7 @@ No modules.
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | <a name="input_posix_user"></a> [posix\_user](#input\_posix\_user) | The POSIX user and group applied to the root directory of the file system | <pre>object({<br>    gid = number<br>    uid = number<br>  })</pre> | `null` | no |
-| <a name="input_root_directory"></a> [root\_directory](#input\_root\_directory) | The directory on the EFS file system that the access point exposes as the root directory to NFS clients using the access point | <pre>object({<br>    creation_info = object({<br>      owner_gid   = number<br>      owner_uid   = number<br>      permissions = string<br>    })<br>    path = string<br>  })</pre> | `null` | no |
+| <a name="input_root_directory"></a> [root\_directory](#input\_root\_directory) | The directory on the EFS file system that the access point exposes as the root directory to NFS clients using the access point | <pre>object({<br>    creation_info = object({<br>      owner_gid   = number<br>      owner_uid   = number<br>      permissions = string<br>    })<br>    path = string<br>  })</pre> | <pre>{<br>  "creation_info": {<br>    "owner_gid": 0,<br>    "owner_uid": 0,<br>    "permissions": "755"<br>  },<br>  "path": "/"<br>}</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
 
 ## Outputs

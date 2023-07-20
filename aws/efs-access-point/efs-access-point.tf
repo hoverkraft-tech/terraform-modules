@@ -1,4 +1,5 @@
 resource "aws_efs_access_point" "ap" {
+  #checkov:skip=CKV_AWS_329:root directory is up to the module end users
   file_system_id = var.efs_file_system_id
   dynamic "posix_user" {
     for_each = var.posix_user == null ? [] : [var.posix_user]
