@@ -8,11 +8,11 @@ resource "aws_cloudfront_distribution" "main" {
   comment             = var.comment
   default_root_object = var.default_root_object
   enabled             = var.enabled
-  http_version        = "http2"
-  is_ipv6_enabled     = true
+  http_version        = var.http_version
+  is_ipv6_enabled     = var.is_ipv6_enabled
   price_class         = var.price_class
   retain_on_delete    = var.retain_on_delete
-  tags                = merge({ "Name" = var.name }, var.tags)
+  tags                = local.interpolated_tags
   wait_for_deployment = var.wait_for_deployment
   web_acl_id          = var.web_acl_id
 
