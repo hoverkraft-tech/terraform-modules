@@ -44,5 +44,16 @@ variable "bucket_id" {
 variable "rules" {
   description = "List of rules to apply to the bucket"
   type        = list(any)
-  default     = []
+  default = [
+    {
+      name   = "Default"
+      status = "Enabled"
+      expiration = {
+        days = 30
+        abort_incomplete_multipart_upload = {
+          days_after_initiation = 7
+        }
+      }
+    },
+  ]
 }

@@ -1,4 +1,5 @@
 resource "aws_s3_bucket_lifecycle_configuration" "config" {
+  #checkov:skip=CKV_AWS_300:invalid - this is handled with the default variable provided by the module
   bucket = var.bucket_id
 
   dynamic "rule" {

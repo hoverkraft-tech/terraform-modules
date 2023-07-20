@@ -3,6 +3,14 @@ resource "aws_cloudfront_origin_access_identity" "main" {
 }
 
 resource "aws_cloudfront_distribution" "main" {
+  #checkov:skip=CKV_AWS_86:invalid - access loging must be left to the end user choice
+  #checkov:skip=CKV_AWS_34:invalid - we prefer to redirect to https for user experience
+  #checkov:skip=CKV_AWS_174:invalid - this is up to the end user of the module
+  #checkov:skip=CKV_AWS_310:invalid - origin failover must be left to the end user choice
+  #checkov:skip=CKV2_AWS_32:TODO - add support for response headers policy
+  #checkov:skip=CKV2_AWS_42:invalid - this is handled in a separate module
+  #checkov:skip=CKV2_AWS_46:invalid - for the module use case
+  #checkov:skip=CKV2_AWS_47:TODO - add support for WAF
 
   aliases             = var.aliases
   comment             = var.comment
@@ -147,7 +155,7 @@ resource "aws_cloudfront_distribution" "main" {
       acm_certificate_arn            = try(viewer_certificate.value.acm_certificate_arn, null)
       cloudfront_default_certificate = try(viewer_certificate.value.cloudfront_default_certificate, false)
       iam_certificate_id             = try(viewer_certificate.value.iam_certificate_id, null)
-      minimum_protocol_version       = try(viewer_certificate.value.minimum_protocol_version, null)
+      minimum_protocol_version       = try(viewer_certificate.value.minimum_protocol_version, "TLSv1.2_2019")
       ssl_support_method             = try(viewer_certificate.value.ssl_support_method, "sni-only")
     }
   }

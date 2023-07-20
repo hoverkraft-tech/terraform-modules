@@ -35,7 +35,7 @@ No modules.
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |
-| <a name="input_rules"></a> [rules](#input\_rules) | List of rules to apply to the bucket | `list(any)` | `[]` | no |
+| <a name="input_rules"></a> [rules](#input\_rules) | List of rules to apply to the bucket | `list(any)` | <pre>[<br>  {<br>    "expiration": {<br>      "abort_incomplete_multipart_upload": {<br>        "days_after_initiation": 7<br>      },<br>      "days": 30<br>    },<br>    "name": "Default",<br>    "status": "Enabled"<br>  }<br>]</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
 
 ## Outputs

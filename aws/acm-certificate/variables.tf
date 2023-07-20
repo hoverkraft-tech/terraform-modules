@@ -32,3 +32,9 @@ variable "subject_alternative_names" {
   type        = list(string)
   default     = []
 }
+
+variable "certificate_transparency_logging_preference" {
+  description = "Certificate transparency logging preference"
+  type        = string
+  default     = "ENABLED"
+}
