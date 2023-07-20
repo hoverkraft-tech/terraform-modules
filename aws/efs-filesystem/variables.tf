@@ -1,3 +1,8 @@
+variable "name" {
+  description = "The name of the efs filesystem"
+  type        = string
+}
+
 variable "customer" {
   description = "Customer for the current deployment"
   type        = string
