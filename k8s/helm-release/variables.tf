@@ -3,6 +3,24 @@ variable "name" {
   type        = string
 }
 
+variable "customer" {
+  description = "Customer for the current deployment"
+  type        = string
+  default     = ""
+}
+
+variable "environment" {
+  description = "Environment for the current deployment"
+  type        = string
+  default     = ""
+}
+
+variable "tags" {
+  description = "Default tags to add to resources"
+  type        = map(any)
+  default     = {}
+}
+
 # module specific variables
 variable "kubeconfig_paths" {
   description = "List of kubeconfig paths to use for the current deployment"

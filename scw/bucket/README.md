@@ -8,12 +8,14 @@ Create a Object Storage bucket in scaleway
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
 | <a name="requirement_scaleway"></a> [scaleway](#requirement\_scaleway) | ~> 2.17.0 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_scaleway"></a> [scaleway](#provider\_scaleway) | ~> 2.17.0 |
+| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
 
 ## Modules
 
@@ -24,6 +26,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [scaleway_object_bucket.bucket](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/object_bucket) | resource |
+| [time_static.last_update](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/static) | resource |
 
 ## Inputs
 

@@ -8,3 +8,11 @@ provider "registry.terraform.io/hashicorp/helm" {
     "h1:a98mBNghv9odh5PVmgdXapgyYJmO/ncAWkwLWdXLuY4=",
   ]
 }
+
+provider "registry.terraform.io/hashicorp/time" {
+  version     = "0.9.1"
+  constraints = "~> 0.9.1"
+  hashes = [
+    "h1:VxyoYYOCaJGDmLz4TruZQTSfQhvwEcMxvcKclWdnpbs=",
+  ]
+}
