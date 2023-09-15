@@ -37,28 +37,32 @@ resource "aws_cloudfront_distribution" "main" {
   dynamic "default_cache_behavior" {
     for_each = [var.default_cache_behavior]
     content {
-      allowed_methods = try(default_cache_behavior.value.allowed_methods, ["GET", "POST", "HEAD", "OPTIONS"])
-      cached_methods  = try(default_cache_behavior.value.cached_methods, ["GET", "POST", "HEAD", "OPTIONS"])
-      compress        = try(default_cache_behavior.value.compress, false)
-      default_ttl     = try(default_cache_behavior.value.default_ttl, null)
+      allowed_methods            = try(default_cache_behavior.value.allowed_methods, ["GET", "POST", "HEAD", "OPTIONS"])
+      cached_methods             = try(default_cache_behavior.value.cached_methods, ["GET", "POST", "HEAD", "OPTIONS"])
+      cache_policy_id            = try(default_cache_behavior.value.cache_policy_id, null)
+      compress                   = try(default_cache_behavior.value.compress, false)
+      default_ttl                = try(default_cache_behavior.value.default_ttl, null)
+      max_ttl                    = try(default_cache_behavior.value.max_ttl, 604800)
+      min_ttl                    = try(default_cache_behavior.value.min_ttl, 0)
+      origin_request_policy_id   = try(default_cache_behavior.value.origin_request_policy_id, null)
+      response_headers_policy_id = try(default_cache_behavior.value.response_headers_policy_id, null)
+      target_origin_id           = try(default_cache_behavior.value.target_origin_id)
+      viewer_protocol_policy     = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
+      # TODO: this is deprecated and we should check if origin_request_policy_id or cache_policy_id is set
       dynamic "forwarded_values" {
-        for_each = [try(default_cache_behavior.value.forwarded_values, null)]
+        for_each = try(default_cache_behavior.value.forwarded_values, null) != null ? [default_cache_behavior.value.forwarded_values] : []
         content {
           dynamic "cookies" {
-            for_each = [try(forwarded_values.value.cookies, null)]
+            for_each = [try(forwarded_values.value.cookies, { forward = "none" })]
             content {
               forward           = try(cookies.value.forward, null)
               whitelisted_names = try(cookies.value.whitelisted_names, null)
             }
           }
-          headers      = try(forwarded_values.value.headers, false)
+          headers      = try(forwarded_values.value.headers, null)
           query_string = try(forwarded_values.value.query_string, false)
         }
       }
-      max_ttl                = try(default_cache_behavior.value.max_ttl, 604800)
-      min_ttl                = try(default_cache_behavior.value.min_ttl, 0)
-      target_origin_id       = try(default_cache_behavior.value.target_origin_id)
-      viewer_protocol_policy = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
     }
   }
 
