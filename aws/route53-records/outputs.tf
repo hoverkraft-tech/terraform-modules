@@ -4,7 +4,7 @@ output "records" {
       name = r.name
       fqdn = r.fqdn
       type = r.type
-      ttl = r.ttl
+      ttl  = r.ttl
     }
   ]
 }
