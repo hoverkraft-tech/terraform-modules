@@ -9,7 +9,6 @@ resource "openstack_compute_instance_v2" "instance" {
   availability_zone       = var.availability_zone
   network_mode            = var.network_mode
   key_pair                = var.ssh_keypair
-  tags                    = local.interpolated_tags
 
   metadata = {
     for k, v in local.interpolated_tags : k => v
@@ -26,6 +25,14 @@ resource "openstack_compute_instance_v2" "instance" {
     }
   }
 
+  block_device {
+    uuid                  = var.image_id
+    source_type           = "image"
+    destination_type      = "local"
+    boot_index            = 0
+    delete_on_termination = true
+  }
+
   dynamic "block_device" {
     for_each = var.block_devices
     content {
@@ -39,7 +46,6 @@ resource "openstack_compute_instance_v2" "instance" {
       volume_type           = lookup(block_device.value, "volume_type", null)
       device_type           = lookup(block_device.value, "device_type", null)
       disk_bus              = lookup(block_device.value, "disk_bus", null)
-      multiattach           = lookup(block_device.value, "multiattach", null)
     }
   }
 

@@ -7,14 +7,14 @@ Create a OVH public cloud instance instance (through openstack api).
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_openstack"></a> [openstack](#requirement\_openstack) | ~> 1.53.0 |
+| <a name="requirement_openstack"></a> [openstack](#requirement\_openstack) | ~> 1.49.0 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_openstack"></a> [openstack](#provider\_openstack) | ~> 1.53.0 |
+| <a name="provider_openstack"></a> [openstack](#provider\_openstack) | ~> 1.49.0 |
 | <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
 
 ## Modules
