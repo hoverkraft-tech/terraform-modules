@@ -110,6 +110,15 @@ resource "aws_cloudfront_distribution" "main" {
       domain_name = try(origin.value.domain_name, null)
       origin_id   = try(origin.value.origin_id, null)
       origin_path = try(origin.value.origin_path, null)
+
+      dynamic "custom_header" {
+        for_each = try([origin.value.custom_header], [])
+        content {
+          name  = try(custom_header.value.name, null)
+          value = try(custom_header.value.value, null)
+        }
+      }
+
       dynamic "custom_origin_config" {
         for_each = try([origin.value.custom_origin_config], [])
         content {
