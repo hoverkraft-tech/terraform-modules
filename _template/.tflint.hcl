@@ -3,8 +3,10 @@ plugin "terraform" {
   preset  = "recommended"
 }
 
-plugin "aws" {
-  enabled = true
-  version = "0.17.1"
-  source  = "github.com/terraform-linters/tflint-ruleset-aws"
-}
+# TODO: enable one of the following plugins and check for updates
+
+# plugin "aws" {
+#   enabled = true
+#   version = "0.30.0"
+#   source  = "github.com/terraform-linters/tflint-ruleset-aws"
+# }
