@@ -11,11 +11,11 @@ resource "aws_lambda_function" "function" {
   reserved_concurrent_executions = var.reserved_concurrent_executions
   role                           = var.iam_role_arn
   runtime                        = var.runtime
-  source_code_hash               = base64sha256(file(var.filename))
+  source_code_hash               = filebase64sha256(var.filename)
   timeout                        = var.timeout
 
   dynamic "vpc_config" {
-    for_each = var.vpc_config
+    for_each = try(length(var.vpc_config, 0), [])
     content {
       security_group_ids = vpc_config.value.security_group_ids
       subnet_ids         = vpc_config.value.subnet_ids
@@ -32,7 +32,7 @@ resource "aws_lambda_function" "function" {
   }
 
   dynamic "dead_letter_config" {
-    for_each = var.dead_letter_config
+    for_each = try(lenght(var.dead_letter_config, 0), [])
     content {
       target_arn = dead_letter_config.value.target_arn
     }
