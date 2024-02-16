@@ -2,7 +2,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
   bucket = var.bucket_name
 
   dynamic "lambda_function" {
-    for_each = try(lenght(var.lambda_function, 0), [])
+    for_each = var.lambda_functions
     content {
       lambda_function_arn = lambda_function.value.lambda_function_arn
       events              = lambda_function.value.events

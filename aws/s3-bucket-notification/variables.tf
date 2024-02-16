@@ -28,7 +28,7 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "lambda_function" {
+variable "lambda_functions" {
   description = "The lambda function to add to the bucket notification"
   type = list(object({
     lambda_function_arn = string

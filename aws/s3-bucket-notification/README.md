@@ -35,7 +35,7 @@ No modules.
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | The name of the S3 bucket | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
-| <a name="input_lambda_function"></a> [lambda\_function](#input\_lambda\_function) | The lambda function to add to the bucket notification | <pre>list(object({<br>    lambda_function_arn = string<br>    events              = list(string)<br>    filter_prefix       = string<br>    filter_suffix       = string<br>  }))</pre> | `[]` | no |
+| <a name="input_lambda_functions"></a> [lambda\_functions](#input\_lambda\_functions) | The lambda function to add to the bucket notification | <pre>list(object({<br>    lambda_function_arn = string<br>    events              = list(string)<br>    filter_prefix       = string<br>    filter_suffix       = string<br>  }))</pre> | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the template resource | `string` | `"my-template"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
 
