@@ -49,3 +49,5 @@ categories:
     label: 'logging'
   - title: '🔇 Silence'
     label: 'silence'
+  - title: '🚦 CI/CD'
+    label: 'ci'
