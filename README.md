@@ -12,6 +12,7 @@ The current modules cover these topics :
 ### ☁️ cloud-providers
 
 - [AWS](./aws/)
+- [OVH](./ovh)
 - [Scaleway](./scw)
 
 ### 🔒 secrets vault
