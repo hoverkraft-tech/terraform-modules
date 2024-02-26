@@ -8,8 +8,9 @@ permissions:
   contents: read
 
 jobs:
+
   pull-request-labeler:
-    runs-on: "ubuntu-latest"
+    runs-on: self-hosted
     permissions:
       contents: write
       pull-requests: write
