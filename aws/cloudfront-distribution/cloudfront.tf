@@ -42,12 +42,13 @@ resource "aws_cloudfront_distribution" "main" {
       cache_policy_id            = try(default_cache_behavior.value.cache_policy_id, null)
       compress                   = try(default_cache_behavior.value.compress, false)
       default_ttl                = try(default_cache_behavior.value.default_ttl, null)
-      max_ttl                    = try(default_cache_behavior.value.max_ttl, 604800)
-      min_ttl                    = try(default_cache_behavior.value.min_ttl, 0)
+      max_ttl                    = try(default_cache_behavior.value.max_ttl, null)
+      min_ttl                    = try(default_cache_behavior.value.min_ttl, null)
       origin_request_policy_id   = try(default_cache_behavior.value.origin_request_policy_id, null)
       response_headers_policy_id = try(default_cache_behavior.value.response_headers_policy_id, null)
       target_origin_id           = try(default_cache_behavior.value.target_origin_id)
-      viewer_protocol_policy     = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
+      #tfsec:ignore:aws-cloudfront-enforce-https it's up to the end user to decide if they want to enforce https
+      viewer_protocol_policy = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
       # TODO: this is deprecated and we should check if origin_request_policy_id or cache_policy_id is set
       dynamic "forwarded_values" {
         for_each = try(default_cache_behavior.value.forwarded_values, null) != null ? [default_cache_behavior.value.forwarded_values] : []
@@ -69,6 +70,7 @@ resource "aws_cloudfront_distribution" "main" {
   dynamic "logging_config" {
     for_each = [var.logging_config]
     content {
+      #tfsec:ignore:aws-cloudfront-enable-logging it's up to the end user to decide if they want to enable logging
       bucket          = try(logging_config.value.bucket, null)
       include_cookies = try(logging_config.value.include_cookies, null)
       prefix          = try(logging_config.value.prefix, null)
@@ -112,7 +114,7 @@ resource "aws_cloudfront_distribution" "main" {
       origin_path = try(origin.value.origin_path, null)
 
       dynamic "custom_header" {
-        for_each = try([origin.value.custom_header], [])
+        for_each = length(origin.value.custom_header) > 0 ? flatten([origin.value.custom_header]) : []
         content {
           name  = try(custom_header.value.name, null)
           value = try(custom_header.value.value, null)
