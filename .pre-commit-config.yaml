@@ -19,7 +19,7 @@ repos:
       #   args: [--branch, main]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.86.0
+    rev: v1.88.0
     hooks:
       #
       # NOTE: this is very slow you might want to enable it
@@ -61,7 +61,7 @@ repos:
           - "--args=--module"
           - "--args=--config=__GIT_WORKING_DIR__/.tflint.hcl"
           - --hook-config=--delegate-chdir
-      - id: terraform_tfsec
+      - id: terraform_trivy
       - id: terraform_checkov
         args:
           - --args=--config-file __GIT_WORKING_DIR__/.checkov.yaml

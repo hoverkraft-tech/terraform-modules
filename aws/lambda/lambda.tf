@@ -1,3 +1,4 @@
+#trivy:ignore:AVD-AWS-0066 xray tracing is up to the user
 resource "aws_lambda_function" "function" {
 
   code_signing_config_arn        = var.code_signing_config_arn
@@ -27,7 +28,6 @@ resource "aws_lambda_function" "function" {
   }
 
   tracing_config {
-    #tfsec:ignore:aws-lambda-enable-tracing
     mode = var.tracing_config_mode
   }
 

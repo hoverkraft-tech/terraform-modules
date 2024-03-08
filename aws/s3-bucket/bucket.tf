@@ -1,5 +1,5 @@
-#tfsec:ignore:aws-s3-encryption-customer-key
-#tfsec:ignore:aws-s3-enable-bucket-logging
+#trivy:ignore:AVD-AWS-0010 encryption is up to the user
+#trivy:ignore:AVD-AWS-0089 bucket logging is up to the user
 resource "aws_s3_bucket" "bucket" {
   #checkov:skip=CKV_AWS_6:invalid - bucket public access is blocked
   #checkov:skip=CKV_AWS_18:invalid - bucket logging is up to the end user of the module
