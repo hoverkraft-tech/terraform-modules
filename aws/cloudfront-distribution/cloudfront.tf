@@ -2,6 +2,8 @@ resource "aws_cloudfront_origin_access_identity" "main" {
   comment = "Origin Access Identity for CloudFront distribution (${var.name})"
 }
 
+#trivy:ignore:AVD-AWS-0010 up to the user
+#trivy:ignore:AVD-AWS-0012 up to the user
 resource "aws_cloudfront_distribution" "main" {
   #checkov:skip=CKV_AWS_86:invalid - access loging must be left to the end user choice
   #checkov:skip=CKV_AWS_34:invalid - we prefer to redirect to https for user experience
@@ -47,8 +49,7 @@ resource "aws_cloudfront_distribution" "main" {
       origin_request_policy_id   = try(default_cache_behavior.value.origin_request_policy_id, null)
       response_headers_policy_id = try(default_cache_behavior.value.response_headers_policy_id, null)
       target_origin_id           = try(default_cache_behavior.value.target_origin_id)
-      #tfsec:ignore:aws-cloudfront-enforce-https it's up to the end user to decide if they want to enforce https
-      viewer_protocol_policy = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
+      viewer_protocol_policy     = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
       # TODO: this is deprecated and we should check if origin_request_policy_id or cache_policy_id is set
       dynamic "forwarded_values" {
         for_each = try(default_cache_behavior.value.forwarded_values, null) != null ? [default_cache_behavior.value.forwarded_values] : []
@@ -70,7 +71,6 @@ resource "aws_cloudfront_distribution" "main" {
   dynamic "logging_config" {
     for_each = [var.logging_config]
     content {
-      #tfsec:ignore:aws-cloudfront-enable-logging it's up to the end user to decide if they want to enable logging
       bucket          = try(logging_config.value.bucket, null)
       include_cookies = try(logging_config.value.include_cookies, null)
       prefix          = try(logging_config.value.prefix, null)
