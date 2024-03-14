@@ -148,8 +148,11 @@ resource "aws_cloudfront_distribution" "main" {
       failover_criteria {
         status_codes = origin_group.value.failover_criteria.status_codes
       }
-      member {
-        origin_id = origin_group.value.member.origin_id
+      dynamic "member" {
+        for_each = length(origin_group.value.member) > 0 ? flatten([origin_group.value.member]) : []
+        content {
+          origin_id = try(member.value.origin_id, null)
+        }
       }
     }
   }
