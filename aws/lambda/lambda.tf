@@ -9,6 +9,7 @@ resource "aws_lambda_function" "function" {
   kms_key_arn                    = var.kms_key_arn
   layers                         = var.layers
   memory_size                    = var.memory_size
+  publish                        = var.publish
   reserved_concurrent_executions = var.reserved_concurrent_executions
   role                           = var.iam_role_arn
   runtime                        = var.runtime
