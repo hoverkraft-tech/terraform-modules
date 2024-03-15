@@ -59,6 +59,12 @@ variable "memory_size" {
   default     = 128
 }
 
+variable "publish" {
+  description = "Whether to publish creation/change as new Lambda Function Version"
+  type        = bool
+  default     = false
+}
+
 variable "timeout" {
   description = "The amount of time that Lambda allows a function to run before stopping it"
   type        = number

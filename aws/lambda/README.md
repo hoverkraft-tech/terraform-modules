@@ -46,6 +46,7 @@ No modules.
 | <a name="input_layers"></a> [layers](#input\_layers) | List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda function | `list(string)` | `[]` | no |
 | <a name="input_memory_size"></a> [memory\_size](#input\_memory\_size) | The amount of memory, in MB, that is allocated to your Lambda function | `number` | `128` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the template resource | `string` | `"my-template"` | no |
+| <a name="input_publish"></a> [publish](#input\_publish) | Whether to publish creation/change as new Lambda Function Version | `bool` | `false` | no |
 | <a name="input_reserved_concurrent_executions"></a> [reserved\_concurrent\_executions](#input\_reserved\_concurrent\_executions) | The number of simultaneous executions to reserve for the function | `number` | `1000` | no |
 | <a name="input_runtime"></a> [runtime](#input\_runtime) | The runtime environment for the Lambda function | `string` | `"python3.8"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
