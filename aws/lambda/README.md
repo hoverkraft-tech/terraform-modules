@@ -59,4 +59,5 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | n/a |
+| <a name="output_qualified_arn"></a> [qualified\_arn](#output\_qualified\_arn) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
