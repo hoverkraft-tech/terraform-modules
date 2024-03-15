@@ -50,6 +50,7 @@ resource "aws_cloudfront_distribution" "main" {
       response_headers_policy_id = try(default_cache_behavior.value.response_headers_policy_id, null)
       target_origin_id           = try(default_cache_behavior.value.target_origin_id)
       viewer_protocol_policy     = try(default_cache_behavior.value.viewer_protocol_policy, "redirect-to-https")
+
       # TODO: this is deprecated and we should check if origin_request_policy_id or cache_policy_id is set
       dynamic "forwarded_values" {
         for_each = try(default_cache_behavior.value.forwarded_values, null) != null ? [default_cache_behavior.value.forwarded_values] : []
@@ -63,6 +64,15 @@ resource "aws_cloudfront_distribution" "main" {
           }
           headers      = try(forwarded_values.value.headers, null)
           query_string = try(forwarded_values.value.query_string, false)
+        }
+      }
+
+      dynamic "lambda_function_association" {
+        for_each = length(default_cache_behavior.value.lambda_function_association) > 0 ? flatten([default_cache_behavior.value.lambda_function_association]) : []
+        content {
+          event_type   = try(lambda_function_association.value.event_type, null)
+          include_body = try(lambda_function_association.value.include_body, null)
+          lambda_arn   = try(lambda_function_association.value.lambda_arn, null)
         }
       }
     }
