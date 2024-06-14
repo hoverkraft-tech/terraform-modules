@@ -107,28 +107,8 @@ variable "logging_config" {
 
 variable "ordered_cache_behavior" {
   description = "An ordered cache behavior element (multiples allowed)."
-  type = list(object({
-    allowed_methods = list(string)
-    cached_methods  = list(string)
-    compress        = bool
-    default_ttl     = number
-    forwarded_values = object({
-      cookies = object({
-        forward           = string
-        whitelisted_names = list(string)
-      })
-      headers      = list(string)
-      query_string = bool
-    })
-    max_ttl                = number
-    min_ttl                = number
-    path_pattern           = string
-    smooth_streaming       = bool
-    target_origin_id       = string
-    trusted_signers        = list(string)
-    viewer_protocol_policy = string
-  }))
-  default = []
+  type        = list(any)
+  default     = []
 }
 
 variable "origin" {

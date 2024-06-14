@@ -68,7 +68,7 @@ resource "aws_cloudfront_distribution" "main" {
       }
 
       dynamic "lambda_function_association" {
-        for_each = length(default_cache_behavior.value.lambda_function_association) > 0 ? flatten([default_cache_behavior.value.lambda_function_association]) : []
+        for_each = try(default_cache_behavior.value.lambda_function_association, [])
         content {
           event_type   = try(lambda_function_association.value.event_type, null)
           include_body = try(lambda_function_association.value.include_body, null)
@@ -90,12 +90,21 @@ resource "aws_cloudfront_distribution" "main" {
   dynamic "ordered_cache_behavior" {
     for_each = var.ordered_cache_behavior
     content {
-      allowed_methods = ordered_cache_behavior.value.allowed_methods
-      cached_methods  = ordered_cache_behavior.value.cached_methods
-      compress        = ordered_cache_behavior.value.compress
-      default_ttl     = ordered_cache_behavior.value.default_ttl
+      allowed_methods            = try(ordered_cache_behavior.value.allowed_methods, null)
+      cache_policy_id            = try(ordered_cache_behavior.value.cache_policy_id, null)
+      cached_methods             = try(ordered_cache_behavior.value.cached_methods, null)
+      compress                   = try(ordered_cache_behavior.value.compress, null)
+      default_ttl                = try(ordered_cache_behavior.value.default_ttl, null)
+      max_ttl                    = try(ordered_cache_behavior.value.max_ttl, null)
+      min_ttl                    = try(ordered_cache_behavior.value.min_ttl, null)
+      origin_request_policy_id   = try(ordered_cache_behavior.value.origin_request_policy_id, null)
+      path_pattern               = try(ordered_cache_behavior.value.path_pattern, null)
+      response_headers_policy_id = try(ordered_cache_behavior.value.response_headers_policy_id, null)
+      target_origin_id           = try(ordered_cache_behavior.value.target_origin_id, null)
+      viewer_protocol_policy     = try(ordered_cache_behavior.value.viewer_protocol_policy, null)
+
       dynamic "forwarded_values" {
-        for_each = ordered_cache_behavior.value.forwarded_values
+        for_each = try(ordered_cache_behavior.value.forwarded_values, [])
         content {
           dynamic "cookies" {
             for_each = forwarded_values.value.cookies
@@ -108,11 +117,6 @@ resource "aws_cloudfront_distribution" "main" {
           query_string = forwarded_values.value.query_string
         }
       }
-      max_ttl                = ordered_cache_behavior.value.max_ttl
-      min_ttl                = ordered_cache_behavior.value.min_ttl
-      path_pattern           = ordered_cache_behavior.value.path_pattern
-      target_origin_id       = ordered_cache_behavior.value.target_origin_id
-      viewer_protocol_policy = ordered_cache_behavior.value.viewer_protocol_policy
     }
   }
 
