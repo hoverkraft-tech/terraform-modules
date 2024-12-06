@@ -1,11 +1,11 @@
 locals {
   interpolated_tags = merge({
     # NOTE: label names must comply with DNS rfc1123
-    "name"             = var.name,
-    "customer"         = var.customer,
-    "environment"      = var.environment,
-    "managed-by"       = "Terraform",
-    "last-modified-at" = time_static.last_update.rfc3339,
+    "name"             = lower(replace(var.name, "/[^a-zA-Z0-9-]/", "-")),
+    "customer"         = lower(replace(var.customer, "/[^a-zA-Z0-9-]/", "-")),
+    "environment"      = lower(replace(var.environment, "/[^a-zA-Z0-9-]/", "-")),
+    "managed-by"       = "terraform",
+    "last-modified-at" = lower(replace(time_static.last_update.rfc3339, "/[^a-zA-Z0-9-]/", "-")),
     },
     var.tags
   )
