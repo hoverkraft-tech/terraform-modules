@@ -33,3 +33,43 @@ variable "object_lock_enabled" {
   type        = bool
   default     = false
 }
+
+# -------------------------------------------------------------------
+# public access config
+# -------------------------------------------------------------------
+variable "block_public_acls" {
+  description = "Whether Amazon S3 should block public ACLs for this bucket. Defaults to true."
+  type        = bool
+  default     = true
+}
+
+variable "block_public_policy" {
+  description = "Whether Amazon S3 should block public bucket policies for this bucket. Defaults to true."
+  type        = bool
+  default     = true
+}
+
+variable "ignore_public_acls" {
+  description = "Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to true."
+  type        = bool
+  default     = true
+}
+
+variable "restrict_public_buckets" {
+  description = "Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to true."
+  type        = bool
+  default     = true
+}
+
+# object ownership policy
+variable "object_ownership" {
+  description = "The container element for object ownership for a bucket's ownership controls."
+  type        = string
+  default     = "BucketOwnerPreferred"
+}
+
+# acls
+variable "acl" {
+  type    = string
+  default = "private"
+}
