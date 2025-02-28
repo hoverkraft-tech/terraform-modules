@@ -5,7 +5,7 @@ locals {
     "customer"         = lower(replace(var.customer, "/[^a-zA-Z0-9-]/", "-")),
     "environment"      = lower(replace(var.environment, "/[^a-zA-Z0-9-]/", "-")),
     "managed-by"       = "terraform",
-    "last-modified-at" = lower(replace(time_static.last_update.rfc3339, "/[^a-zA-Z0-9-]/", "-")),
+    "last-modified-at" = formatdate("YYYYMMDD-hhmmss", time_static.last_update.rfc3339),
     },
     var.tags
   )
