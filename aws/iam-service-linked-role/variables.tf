@@ -31,4 +31,5 @@ variable "aws_service_name" {
 variable "custom_suffix" {
   type        = string
   description = "Additional string appended to the role name. Not all AWS services support custom suffixes."
+  default     = null
 }
