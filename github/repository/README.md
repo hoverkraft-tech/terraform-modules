@@ -73,7 +73,6 @@ No modules.
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_delete_branch_on_merge"></a> [delete\_branch\_on\_merge](#input\_delete\_branch\_on\_merge) | Set to true to delete head branches when pull requests are merged | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | A short description of the repository | `string` | `"terraform created repository"` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_gitignore_template"></a> [gitignore\_template](#input\_gitignore\_template) | Use a template for the .gitignore file | `string` | `""` | no |
 | <a name="input_has_discussions"></a> [has\_discussions](#input\_has\_discussions) | Set to true to enable discussions for this repository | `bool` | `false` | no |
 | <a name="input_has_issues"></a> [has\_issues](#input\_has\_issues) | Set to true to enable issues for this repository | `bool` | `true` | no |

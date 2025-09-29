@@ -40,7 +40,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | The id of pci project | `string` | n/a | yes |
 | <a name="input_regions"></a> [regions](#input\_regions) | array of OVH pci regions where the network will exists | `list(any)` | `null` | no |

@@ -33,7 +33,6 @@ No modules.
 | <a name="input_bucket_id"></a> [bucket\_id](#input\_bucket\_id) | ID of the bucket to apply the lifecycle configuration | `string` | n/a | yes |
 | <a name="input_bucket_policy"></a> [bucket\_policy](#input\_bucket\_policy) | policy (json) to apply to the bucket | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
 

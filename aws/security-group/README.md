@@ -35,7 +35,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment applied to this instance | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_sg_rules"></a> [sg\_rules](#input\_sg\_rules) | Security group rules | `any` | <pre>{<br>  "ingress_ssh": {<br>    "cidr_blocks": [<br>      "0.0.0.0/0"<br>    ],<br>    "description": "allow ssh in",<br>    "from_port": 22,<br>    "ipv6_cidr_blocks": [],<br>    "protocol": "tcp",<br>    "self": false,<br>    "source_security_group_id": null,<br>    "to_port": 22,<br>    "type": "ingress"<br>  },<br>  "outbound_all": {<br>    "cidr_blocks": [<br>      "0.0.0.0/0"<br>    ],<br>    "description": "allow all outbond traffic",<br>    "from_port": 0,<br>    "ipv6_cidr_blocks": [],<br>    "protocol": "-1",<br>    "self": false,<br>    "source_security_group_id": null,<br>    "to_port": 0,<br>    "type": "egress"<br>  }<br>}</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br>  "ManagedBy": "terraform"<br>}</pre> | no |

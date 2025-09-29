@@ -38,7 +38,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | The OVH public cloud project id | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | <a name="input_pg_allowed_ips"></a> [pg\_allowed\_ips](#input\_pg\_allowed\_ips) | IPs cidrs allowed to access the database | `list(string)` | `null` | no |
 | <a name="input_pg_databases"></a> [pg\_databases](#input\_pg\_databases) | Name of the databases to create | `list(string)` | `[]` | no |

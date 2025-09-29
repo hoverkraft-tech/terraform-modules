@@ -37,7 +37,6 @@ No modules.
 | <a name="input_creation_token"></a> [creation\_token](#input\_creation\_token) | A string of up to 64 ASCII characters that Amazon EFS uses to ensure idempotent creation. This is useful for ensuring a file system is only created once, even if the create call is retried as a result of a timeout or server error. This value is optional and can be omitted. | `string` | `null` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_encrypted"></a> [encrypted](#input\_encrypted) | Whether the file system is encrypted. The default is false. | `bool` | `true` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | The ID of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the encrypted file system. | `string` | `null` | no |
 | <a name="input_lifecycle_policy"></a> [lifecycle\_policy](#input\_lifecycle\_policy) | A file system lifecycle policy object (documented below). | `any` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the efs filesystem | `string` | n/a | yes |

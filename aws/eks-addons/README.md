@@ -35,7 +35,6 @@ No modules.
 | <a name="input_addons"></a> [addons](#input\_addons) | List of addons to enable and version to use | `list(map(string))` | <pre>[<br>  {<br>    "name": "vpc-cni",<br>    "version": "v1.10.1-eksbuild.1"<br>  },<br>  {<br>    "name": "coredns",<br>    "version": "v1.8.4-eksbuild.1"<br>  },<br>  {<br>    "name": "kube-proxy",<br>    "version": "v1.21.2-eksbuild.2"<br>  },<br>  {<br>    "name": "ebs-csi-driver",<br>    "version": "v1.11.2-eksbuild.1"<br>  }<br>]</pre> | no |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | The name of the cluster | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current addons set | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current addons set | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the current addons set | `string` | `"eks-addons"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
 

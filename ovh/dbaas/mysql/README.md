@@ -39,7 +39,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | The OVH public cloud project id | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_mysql_allowed_ips"></a> [mysql\_allowed\_ips](#input\_mysql\_allowed\_ips) | IPs cidrs allowed to access the database | `list(string)` | `null` | no |
 | <a name="input_mysql_databases"></a> [mysql\_databases](#input\_mysql\_databases) | Name of the databases to create | `list(string)` | `[]` | no |
 | <a name="input_mysql_flavor"></a> [mysql\_flavor](#input\_mysql\_flavor) | Flavor of the database | `string` | `"db1-4"` | no |

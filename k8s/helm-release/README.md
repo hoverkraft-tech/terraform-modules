@@ -39,7 +39,6 @@ No modules.
 | <a name="input_cleanup_on_fail"></a> [cleanup\_on\_fail](#input\_cleanup\_on\_fail) | Cleanup on fail | `bool` | `false` | no |
 | <a name="input_create_namespace"></a> [create\_namespace](#input\_create\_namespace) | Create namespace | `bool` | `true` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_kubeconfig_context"></a> [kubeconfig\_context](#input\_kubeconfig\_context) | Kubeconfig context to use for the current deployment | `string` | `null` | no |
 | <a name="input_kubeconfig_paths"></a> [kubeconfig\_paths](#input\_kubeconfig\_paths) | List of kubeconfig paths to use for the current deployment | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the helm release | `string` | n/a | yes |

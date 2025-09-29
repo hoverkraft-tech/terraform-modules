@@ -36,7 +36,6 @@ No modules.
 | <a name="input_aws_service_name"></a> [aws\_service\_name](#input\_aws\_service\_name) | The AWS service to which this role is attached | `string` | n/a | yes |
 | <a name="input_custom_suffix"></a> [custom\_suffix](#input\_custom\_suffix) | Additional string appended to the role name. Not all AWS services support custom suffixes. | `string` | `null` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this role | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment applied to this role | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this role | `string` | `"myIAMrole"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this role | `map(any)` | `{}` | no |
 

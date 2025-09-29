@@ -36,7 +36,6 @@ No modules.
 | <a name="input_availability_zone_hints"></a> [availability\_zone\_hints](#input\_availability\_zone\_hints) | Availability zone hints to use for the instance | `string` | `null` | no |
 | <a name="input_block_devices"></a> [block\_devices](#input\_block\_devices) | Block devices to use for the instance | `list(any)` | `[]` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_flavor_id"></a> [flavor\_id](#input\_flavor\_id) | Flavor ID to use for the instance (default: b2-7 on GRA9) | `string` | `"906e8259-0340-4856-95b5-4ea2d26fe377"` | no |
 | <a name="input_image_id"></a> [image\_id](#input\_image\_id) | Image ID to use for the instance (default: Ubuntu 22.04 UEFI on GRA9) | `string` | `"b627c305-6945-47b5-8b69-c8d436f340a3"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |

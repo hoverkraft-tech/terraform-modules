@@ -21,9 +21,6 @@ repos:
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.88.0
     hooks:
-      #
-      # NOTE: this is very slow you might want to enable it
-      # from time to time but not on every commit
       # - id: terraform_providers_lock
       #   args:
       #     - --tf-init-args=-upgrade

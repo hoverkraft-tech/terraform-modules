@@ -35,7 +35,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
 | <a name="input_dns_nameservers"></a> [dns\_nameservers](#input\_dns\_nameservers) | list of dns servers that will be send by dhcp on this subnet | `list(string)` | <pre>[<br>  "8.8.8.8",<br>  "8.8.4.4"<br>]</pre> | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment applied to this instance | `string` | `""` | no |
 | <a name="input_ip"></a> [ip](#input\_ip) | map of subnet ip elements {start, end, netwok} | `map(any)` | <pre>{<br>  "end": "10.0.254.254",<br>  "network": "10.0.0.0/16",<br>  "start": "10.0.0.1"<br>}</pre> | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_network_id"></a> [network\_id](#input\_network\_id) | OVH vrack network id | `string` | n/a | yes |

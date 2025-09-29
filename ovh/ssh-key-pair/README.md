@@ -36,7 +36,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_ovh_use_old_ssh_keys"></a> [ovh\_use\_old\_ssh\_keys](#input\_ovh\_use\_old\_ssh\_keys) | Use old ssh keys behavior (true) or new one (false). Previous behabvior was not linked to openstack ssh-keys. New one does. | `bool` | `true` | no |
 | <a name="input_public_key"></a> [public\_key](#input\_public\_key) | Public key content | `string` | n/a | yes |

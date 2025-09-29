@@ -36,7 +36,6 @@ No modules.
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_default_project_id"></a> [default\_project\_id](#input\_default\_project\_id) | The default project ID to use with object storage | `string` | `null` | no |
 | <a name="input_description"></a> [description](#input\_description) | Description of the iam api key | `string` | `null` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_expires_at"></a> [expires\_at](#input\_expires\_at) | The date and time of the expiration of the iam api key | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the bucket | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
