@@ -38,7 +38,6 @@ No modules.
 | <a name="input_config_path"></a> [config\_path](#input\_config\_path) | The kubeconfig to use for the kubernetes provider | `string` | `""` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_data"></a> [data](#input\_data) | The data to store in the secret | `map(any)` | `{}` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | Labels to add to the secret | `map(any)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the helm release | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | The namespace to deploy the secret into | `string` | `"default"` | no |

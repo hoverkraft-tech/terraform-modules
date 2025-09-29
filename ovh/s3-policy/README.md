@@ -35,7 +35,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | OVH service name | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment applied to this instance | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_ovh_user_id"></a> [ovh\_user\_id](#input\_ovh\_user\_id) | OVH user id | `string` | n/a | yes |
 | <a name="input_policy"></a> [policy](#input\_policy) | OVH user policy (json) | `string` | n/a | yes |

@@ -38,7 +38,6 @@ No modules.
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | OVH service name | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
 | <a name="input_description"></a> [description](#input\_description) | OVH user description | `string` | `"OVH user"` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment applied to this instance | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_ovh_role_names"></a> [ovh\_role\_names](#input\_ovh\_role\_names) | OVH user role names | `list(string)` | `[]` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br>  "ManagedBy": "terraform"<br>}</pre> | no |

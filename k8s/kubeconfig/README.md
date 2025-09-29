@@ -35,7 +35,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_content"></a> [content](#input\_content) | Content of the kubeconfig file | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment applied to this instance | `string` | `""` | no |
 | <a name="input_filename"></a> [filename](#input\_filename) | The path where to store the kubeconfig file | `string` | `"/tmp/kube.config"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br>  "ManagedBy": "terraform"<br>}</pre> | no |

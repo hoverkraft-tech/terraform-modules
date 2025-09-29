@@ -64,7 +64,6 @@ No modules.
 | <a name="input_branch_pattern"></a> [branch\_pattern](#input\_branch\_pattern) | Branch name pattern to protect | `string` | `"main"` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_enforce_admins"></a> [enforce\_admins](#input\_enforce\_admins) | Enforce required status checks for repository administrators | `bool` | `true` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_force_push_bypassers"></a> [force\_push\_bypassers](#input\_force\_push\_bypassers) | List of actor IDs that can bypass force push restrictions | `any` | `[]` | no |
 | <a name="input_lock_branch"></a> [lock\_branch](#input\_lock\_branch) | Lock the branch | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the branch protection rule | `string` | n/a | yes |

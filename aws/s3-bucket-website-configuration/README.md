@@ -32,7 +32,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_bucket_id"></a> [bucket\_id](#input\_bucket\_id) | ID of the bucket to apply the lifecycle configuration | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_error_document"></a> [error\_document](#input\_error\_document) | error document for the website configuration | `any` | `null` | no |
 | <a name="input_index_document"></a> [index\_document](#input\_index\_document) | index document for the website configuration | `any` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |

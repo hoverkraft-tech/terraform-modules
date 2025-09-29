@@ -35,7 +35,6 @@ No modules.
 | <a name="input_application_id"></a> [application\_id](#input\_application\_id) | The ID of the application the policy is associated with | `string` | `null` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_description"></a> [description](#input\_description) | The description of the iam application | `string` | `null` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_group_id"></a> [group\_id](#input\_group\_id) | The ID of the group the policy is associated with | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the bucket | `string` | n/a | yes |
 | <a name="input_no_principal"></a> [no\_principal](#input\_no\_principal) | If true, the policy will not be associated with any principal | `bool` | `null` | no |

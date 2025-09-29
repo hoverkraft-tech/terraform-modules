@@ -36,7 +36,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment applied to this instance | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_ovh_write_user"></a> [ovh\_write\_user](#input\_ovh\_write\_user) | OVH user name who will have write access to the bucket | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | OVH region | `string` | `"GRA"` | no |

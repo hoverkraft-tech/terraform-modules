@@ -39,7 +39,6 @@ No modules.
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_desired_size"></a> [desired\_size](#input\_desired\_size) | The desired size of the node group | `number` | `1` | no |
 | <a name="input_disk_size"></a> [disk\_size](#input\_disk\_size) | The size of the disk to use for the launch template | `number` | `null` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_force_update_version"></a> [force\_update\_version](#input\_force\_update\_version) | Force a new version of the launch template to be created | `bool` | `false` | no |
 | <a name="input_instance_types"></a> [instance\_types](#input\_instance\_types) | The instance types to use for the launch template | `list(string)` | `null` | no |
 | <a name="input_k8s_version"></a> [k8s\_version](#input\_k8s\_version) | The version of kubernetes to use | `string` | `null` | no |

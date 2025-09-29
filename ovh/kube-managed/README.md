@@ -37,7 +37,6 @@ No modules.
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | Cloud project ID for this cluster | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_default_vrack_gateway"></a> [default\_vrack\_gateway](#input\_default\_vrack\_gateway) | Default vrack gateway for nodes egress | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_k8s_version"></a> [k8s\_version](#input\_k8s\_version) | The kubernetes version for this cluster | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_private_network_id"></a> [private\_network\_id](#input\_private\_network\_id) | Private network ID for the nodes of this cluster | `string` | `""` | no |

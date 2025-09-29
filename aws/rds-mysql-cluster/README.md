@@ -54,7 +54,6 @@ No modules.
 | <a name="input_engine"></a> [engine](#input\_engine) | The database engine to use | `string` | `"aurora-mysql"` | no |
 | <a name="input_engine_mode"></a> [engine\_mode](#input\_engine\_mode) | The database engine mode to use | `string` | `"serverless"` | no |
 | <a name="input_engine_version"></a> [engine\_version](#input\_engine\_version) | The engine version to use | `string` | `"8.0.mysql_aurora.3.02.2"` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_iam_database_authentication_enabled"></a> [iam\_database\_authentication\_enabled](#input\_iam\_database\_authentication\_enabled) | Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled | `bool` | `false` | no |
 | <a name="input_iam_roles"></a> [iam\_roles](#input\_iam\_roles) | A list of ARNs for the IAM roles to associate with the DB instance | `list(string)` | `null` | no |
 | <a name="input_instances"></a> [instances](#input\_instances) | A list of DB instances to create | <pre>list(object({<br>    name                = string<br>    instance_class      = string<br>    publicly_accessible = bool<br>    availability_zone   = string<br>  }))</pre> | `null` | no |

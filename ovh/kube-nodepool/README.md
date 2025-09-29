@@ -38,7 +38,6 @@ No modules.
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | The OVH public cloud project id | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_desired_nodes"></a> [desired\_nodes](#input\_desired\_nodes) | Desired number of nodes in the pool | `number` | `1` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_flavor_name"></a> [flavor\_name](#input\_flavor\_name) | The flavor of OS image to use | `string` | `"b2-7"` | no |
 | <a name="input_kube_id"></a> [kube\_id](#input\_kube\_id) | The kube controlplane id | `string` | n/a | yes |
 | <a name="input_max_nodes"></a> [max\_nodes](#input\_max\_nodes) | Maximum number of nodes in the pool | `number` | `1` | no |

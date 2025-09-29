@@ -37,7 +37,6 @@ No modules.
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_dead_letter_config"></a> [dead\_letter\_config](#input\_dead\_letter\_config) | List of dead letter configuration blocks | <pre>object({<br>    target_arn = string<br>  })</pre> | `null` | no |
 | <a name="input_env_vars"></a> [env\_vars](#input\_env\_vars) | A map that defines environment variables for the Lambda function | `map(string)` | `{}` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_filename"></a> [filename](#input\_filename) | The path to the function's deployment package within the local filesystem | `string` | `""` | no |
 | <a name="input_handler"></a> [handler](#input\_handler) | The function within your code that Lambda calls to begin execution | `string` | `"lambda_function.lambda_handler"` | no |
 | <a name="input_iam_role_arn"></a> [iam\_role\_arn](#input\_iam\_role\_arn) | The ARN of the IAM role that the Lambda function assumes when it executes your function to access any other AWS resources | `string` | n/a | yes |

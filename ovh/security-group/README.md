@@ -33,7 +33,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment for the current deployment | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | Region to use for the instance | `string` | n/a | yes |
 | <a name="input_rules"></a> [rules](#input\_rules) | List of rules to add to the security group | `list(any)` | `[]` | no |
