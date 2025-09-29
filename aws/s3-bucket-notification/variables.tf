@@ -10,12 +10,6 @@ variable "customer" {
   default     = ""
 }
 
-variable "environment" {
-  description = "Environment for the current deployment"
-  type        = string
-  default     = ""
-}
-
 variable "tags" {
   description = "Default tags to add to resources"
   type        = map(any)

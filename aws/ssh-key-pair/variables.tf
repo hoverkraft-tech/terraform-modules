@@ -10,12 +10,6 @@ variable "customer" {
   default     = ""
 }
 
-variable "environment" {
-  description = "Environment applied to this instance"
-  type        = string
-  default     = ""
-}
-
 variable "tags" {
   description = "Tags applied to this instance"
   type        = map(string)

@@ -10,12 +10,6 @@ variable "customer" {
   default     = ""
 }
 
-variable "environment" {
-  description = "Environment applied to this role"
-  type        = string
-  default     = ""
-}
-
 variable "tags" {
   description = "Tags applied to this role"
   type        = map(any)
