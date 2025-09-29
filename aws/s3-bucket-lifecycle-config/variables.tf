@@ -12,12 +12,6 @@ variable "customer" {
 }
 
 # tflint-ignore: terraform_unused_declarations
-variable "environment" {
-  description = "Environment for the current deployment"
-  type        = string
-  default     = ""
-}
-
 # tflint-ignore: terraform_unused_declarations
 variable "tags" {
   description = "Default tags to add to resources"
