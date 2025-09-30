@@ -38,5 +38,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_bucket"></a> [bucket](#output\_bucket) | The S3 bucket name |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

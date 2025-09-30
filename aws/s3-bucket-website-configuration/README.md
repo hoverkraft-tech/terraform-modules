@@ -41,5 +41,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_website_domain"></a> [website\_domain](#output\_website\_domain) | The domain name of the website endpoint |
+| <a name="output_website_endpoint"></a> [website\_endpoint](#output\_website\_endpoint) | The website endpoint URL |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

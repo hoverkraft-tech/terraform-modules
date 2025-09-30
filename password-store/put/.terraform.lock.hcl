@@ -5,11 +5,7 @@ provider "registry.terraform.io/mecodia/pass" {
   version     = "3.1.0"
   constraints = "~> 3.1.0"
   hashes = [
-    "h1:91E0qTCPnfSTzTtTN8DB1KkcGGB5os6yVMek4gIKTpM=",
-    "h1:aWjAmEGZEydC8f4iduMwuFhuj8IDMvidiQfbeNOfMRw=",
     "h1:kyFSE+h7PVSvQXWmEdw6KTQP29JF+t+oJgNx0YUJhB0=",
-    "h1:ozoN0+nmuHM64VfQOkhKOaKqbxR8LQKMAIC0m9LU4iI=",
-    "h1:xJBWLuyHUrhbwJcjJ4RsCMGUHqJndfi4YNVCVaHKvzw=",
     "zh:30129159550a34f4fbeec90f344d5aa23e1ec71ea3322ab230e48db83d25d4fe",
     "zh:5b81908b42abbbcc8a1ca043d9b053a1d2679af9296801e33bf378c6bb37a9ca",
     "zh:5da39cbebbce758a0e327f7a8b7c0014853d9ba7183e835be78f7960a7ecd629",

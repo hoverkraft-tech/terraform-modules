@@ -51,5 +51,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_name"></a> [name](#output\_name) | The name of the helm release |
+| <a name="output_namespace"></a> [namespace](#output\_namespace) | The namespace of the helm release |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
