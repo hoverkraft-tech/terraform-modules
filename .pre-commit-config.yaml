@@ -33,6 +33,10 @@ repos:
       #     - --args=-platform=linux_amd64
       #     - --args=-platform=linux_arm64
       - id: terraform_validate
+        args:
+          - --hook-config=--parallelism-limit=1
+          - --hook-config=--retry-once-with-cleanup=true
+          - --tf-init-args=-reconfigure
       - id: tfupdate
         name: Autoupdate Terraform versions
         args:

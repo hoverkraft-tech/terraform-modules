@@ -43,5 +43,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_certificate_arn"></a> [certificate\_arn](#output\_certificate\_arn) | The ARN of the validated certificate |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

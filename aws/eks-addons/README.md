@@ -41,5 +41,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_addon_arns"></a> [addon\_arns](#output\_addon\_arns) | The ARNs of the EKS addons |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
