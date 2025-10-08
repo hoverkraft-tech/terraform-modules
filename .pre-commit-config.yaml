@@ -24,9 +24,9 @@ repos:
       # This hook is configured to run only in manual stage to avoid unnecessary provider lock file updates on every commit.
       # Run this hook manually when you need to update the provider lock file across all supported platforms.
       - id: terraform_providers_lock
-        stage: [manual]
+        stages: [manual]
         args:
-          - --tf-init-args=-upgrade
+          - --hook-config=--mode=only-check-is-current-lockfile-cross-platform
           - --args=-platform=windows_amd64
           - --args=-platform=darwin_amd64
           - --args=-platform=darwin_arm64

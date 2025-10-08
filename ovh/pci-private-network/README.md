@@ -7,7 +7,7 @@ It will be linked to an existing vrack, that you must create manually before usi
 
 To avoid terraform errors with state and so on it's simplier to create the vrack manually and later assign it your public cloud project.
 Also remember that a project can't be detached from vrack without calling OVH support which can cause a huge loss of time.
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -53,4 +53,4 @@ No modules.
 | <a name="output_id"></a> [id](#output\_id) | n/a |
 | <a name="output_name"></a> [name](#output\_name) | n/a |
 | <a name="output_uuid"></a> [uuid](#output\_uuid) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

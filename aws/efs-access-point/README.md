@@ -1,7 +1,7 @@
 # AWS EFS Access Point Module
 
 This module creates an EFS Access Point.
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -46,4 +46,4 @@ No modules.
 | <a name="output_arn"></a> [arn](#output\_arn) | n/a |
 | <a name="output_file_system_arn"></a> [file\_system\_arn](#output\_file\_system\_arn) | n/a |
 | <a name="output_id"></a> [id](#output\_id) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

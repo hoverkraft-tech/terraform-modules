@@ -1,7 +1,7 @@
 # k8s-namespace
 
 Create a namespace in kubernetes
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -45,4 +45,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_name"></a> [name](#output\_name) | The name of the Kubernetes namespace |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

@@ -16,6 +16,6 @@ resource "aws_nat_gateway" "nat_gw" {
   subnet_id     = aws_subnet.pub_subnet[count.index].id
   tags = merge(
     local.interpolated_tags,
-    { Name = "${var.availability_zones[count.index]}" },
+    { Name = var.availability_zones[count.index] },
   )
 }

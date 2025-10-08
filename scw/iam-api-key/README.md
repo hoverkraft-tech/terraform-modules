@@ -1,7 +1,7 @@
 # SCW IAM API key
 
 Create an IAM API key in scaleway
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -49,4 +49,4 @@ No modules.
 | <a name="output_creation_ip"></a> [creation\_ip](#output\_creation\_ip) | Creation IP of the api key |
 | <a name="output_id"></a> [id](#output\_id) | ID of the api key |
 | <a name="output_secret_key"></a> [secret\_key](#output\_secret\_key) | Secret key of the api key |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

@@ -1,7 +1,7 @@
 # password-store secret writter module
 
 Put a secret into a password-store repository.
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -40,4 +40,4 @@ No modules.
 |------|-------------|
 | <a name="output_body"></a> [body](#output\_body) | The body of the secret |
 | <a name="output_full"></a> [full](#output\_full) | Entire secret contents |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

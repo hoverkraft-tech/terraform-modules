@@ -1,7 +1,7 @@
 # OVH ssh-key-pair module
 
 Create a new ssh keypair and uplaod it to ovh
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -46,4 +46,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_name"></a> [name](#output\_name) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

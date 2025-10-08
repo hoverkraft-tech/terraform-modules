@@ -2,7 +2,7 @@
 
 Get a secret from a password-store repository.
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -41,4 +41,4 @@ No modules.
 | <a name="output_full"></a> [full](#output\_full) | n/a |
 | <a name="output_password"></a> [password](#output\_password) | n/a |
 | <a name="output_path"></a> [path](#output\_path) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

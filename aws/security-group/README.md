@@ -2,7 +2,7 @@
 
 Create a EC2 security group and manage it's rules
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -47,4 +47,4 @@ No modules.
 | <a name="output_arn"></a> [arn](#output\_arn) | AWS security group arn |
 | <a name="output_id"></a> [id](#output\_id) | AWS security group id |
 | <a name="output_name"></a> [name](#output\_name) | AWS security group name |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

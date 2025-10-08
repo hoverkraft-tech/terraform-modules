@@ -1,7 +1,7 @@
 # SCW bucket module
 
 Create a Object Storage bucket in scaleway
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -48,4 +48,4 @@ No modules.
 | <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | The endpoint of the bucket |
 | <a name="output_id"></a> [id](#output\_id) | The ID of the bucket |
 | <a name="output_region"></a> [region](#output\_region) | The region of the bucket |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

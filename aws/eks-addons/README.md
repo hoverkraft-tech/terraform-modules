@@ -1,7 +1,7 @@
 # eks addons
 
 Deploy a llist of eks addons to an eks cluster
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -43,4 +43,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_addon_arns"></a> [addon\_arns](#output\_addon\_arns) | The ARNs of the EKS addons |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

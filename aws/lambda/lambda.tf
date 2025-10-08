@@ -1,5 +1,6 @@
 #trivy:ignore:AVD-AWS-0066 xray tracing is up to the user
 resource "aws_lambda_function" "function" {
+  #checkov:skip=CKV_AWS_363:invalid - runtime is a variable provided by the user
 
   code_signing_config_arn        = var.code_signing_config_arn
   description                    = var.lambda_description

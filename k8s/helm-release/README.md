@@ -2,7 +2,7 @@
 
 Deploy a kubernetes application trough helm
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -55,4 +55,4 @@ No modules.
 |------|-------------|
 | <a name="output_name"></a> [name](#output\_name) | The name of the helm release |
 | <a name="output_namespace"></a> [namespace](#output\_namespace) | The namespace of the helm release |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

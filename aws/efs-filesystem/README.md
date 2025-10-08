@@ -1,7 +1,7 @@
 # AWS EFS Filesystem
 
 This module creates an EFS Filesystem and optionally a mount target in each of the specified subnets.
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -57,4 +57,4 @@ No modules.
 | <a name="output_number_of_mount_targets"></a> [number\_of\_mount\_targets](#output\_number\_of\_mount\_targets) | n/a |
 | <a name="output_owner_id"></a> [owner\_id](#output\_owner\_id) | n/a |
 | <a name="output_size_in_bytes"></a> [size\_in\_bytes](#output\_size\_in\_bytes) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
