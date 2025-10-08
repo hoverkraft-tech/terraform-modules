@@ -48,7 +48,9 @@ No modules.
 | <a name="input_object_lock_enabled"></a> [object\_lock\_enabled](#input\_object\_lock\_enabled) | A boolean that indicates whether this bucket has an Object Lock configuration enabled. Enable Object Lock to prevent objects from being deleted or overwritten for a fixed amount of time or indefinitely. | `bool` | `false` | no |
 | <a name="input_object_ownership"></a> [object\_ownership](#input\_object\_ownership) | The container element for object ownership for a bucket's ownership controls. | `string` | `"BucketOwnerPreferred"` | no |
 | <a name="input_restrict_public_buckets"></a> [restrict\_public\_buckets](#input\_restrict\_public\_buckets) | Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to true. | `bool` | `true` | no |
+| <a name="input_sse_enabled"></a> [sse\_enabled](#input\_sse\_enabled) | A boolean that indicates whether this bucket has SSE enabled. | `bool` | `true` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
+| <a name="input_versioning_enabled"></a> [versioning\_enabled](#input\_versioning\_enabled) | A boolean that indicates whether this bucket has versioning enabled. | `bool` | `true` | no |
 
 ## Outputs
 

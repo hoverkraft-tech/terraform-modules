@@ -28,6 +28,18 @@ variable "object_lock_enabled" {
   default     = false
 }
 
+variable "sse_enabled" {
+  description = "A boolean that indicates whether this bucket has SSE enabled."
+  type        = bool
+  default     = true
+}
+
+variable "versioning_enabled" {
+  description = "A boolean that indicates whether this bucket has versioning enabled."
+  type        = bool
+  default     = true
+}
+
 # -------------------------------------------------------------------
 # public access config
 # -------------------------------------------------------------------
