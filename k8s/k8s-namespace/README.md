@@ -1,6 +1,15 @@
 # k8s-namespace
 
 Create a namespace in kubernetes
+
+## Behavior
+
+This module includes lifecycle rules that ignore changes to metadata labels and annotations. This means that external tools (like Rancher) can modify labels and annotations without Terraform attempting to revert those changes.
+
+If you need to update labels or annotations through Terraform after the namespace is created, you have two options:
+1. Use `terraform apply -replace="kubernetes_namespace.ns"` to force recreation
+2. Temporarily comment out the lifecycle block, apply changes, then uncomment it
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
