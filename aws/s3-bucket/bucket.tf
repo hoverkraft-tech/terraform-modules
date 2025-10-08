@@ -29,7 +29,7 @@ resource "aws_s3_bucket_public_access_block" "bucket_public_access" {
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
-  count  = var.sse_enabled == true ? 1 : 0
+  count  = var.sse_enabled ? 1 : 0
   bucket = aws_s3_bucket.bucket.id
 
   rule {
