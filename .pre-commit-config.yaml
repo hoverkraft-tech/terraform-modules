@@ -1,7 +1,7 @@
 repos:
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v6.0.0
     hooks:
       - id: check-merge-conflict
       - id: end-of-file-fixer
@@ -19,16 +19,19 @@ repos:
       #   args: [--branch, main]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.88.0
+    rev: v1.101.0
     hooks:
-      # - id: terraform_providers_lock
-      #   args:
-      #     - --tf-init-args=-upgrade
-      #     - --args=-platform=windows_amd64
-      #     - --args=-platform=darwin_amd64
-      #     - --args=-platform=darwin_arm64
-      #     - --args=-platform=linux_amd64
-      #     - --args=-platform=linux_arm64
+      # This hook is configured to run only in manual stage to avoid unnecessary provider lock file updates on every commit.
+      # Run this hook manually when you need to update the provider lock file across all supported platforms.
+      - id: terraform_providers_lock
+        stage: [manual]
+        args:
+          - --tf-init-args=-upgrade
+          - --args=-platform=windows_amd64
+          - --args=-platform=darwin_amd64
+          - --args=-platform=darwin_arm64
+          - --args=-platform=linux_amd64
+          - --args=-platform=linux_arm64
       - id: terraform_validate
         args:
           - --hook-config=--parallelism-limit=1
