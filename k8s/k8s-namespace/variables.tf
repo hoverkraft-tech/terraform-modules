@@ -39,9 +39,3 @@ variable "config_context" {
   type        = string
   default     = null
 }
-
-variable "ignore_metadata_changes" {
-  description = "Ignore changes to metadata labels and annotations when they are modified externally (e.g., by Rancher)"
-  type        = bool
-  default     = false
-}
