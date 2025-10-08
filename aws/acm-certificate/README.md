@@ -1,7 +1,7 @@
 # AWS ACM certificate
 
 This module creates an ACM certificate
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -45,4 +45,4 @@ No modules.
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | ARN of the certificate |
 | <a name="output_domain_validation_options"></a> [domain\_validation\_options](#output\_domain\_validation\_options) | Domain Validation Options |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

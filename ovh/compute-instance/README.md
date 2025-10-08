@@ -1,7 +1,7 @@
 # OVH mysql DBaaS
 
 Create a OVH public cloud instance instance (through openstack api).
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -56,4 +56,4 @@ No modules.
 |------|-------------|
 | <a name="output_access_ip_v4"></a> [access\_ip\_v4](#output\_access\_ip\_v4) | The IPv4 access address of the instance |
 | <a name="output_name"></a> [name](#output\_name) | The name of the compute instance |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

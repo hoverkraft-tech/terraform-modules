@@ -1,7 +1,7 @@
 # IAM EKS OIDC provider
 
 Create a IAM OIDC provider used to link EKS Services Accounts and IAM roles
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -44,4 +44,4 @@ No modules.
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | The ARN of the OIDC provider |
 | <a name="output_url"></a> [url](#output\_url) | The URL of the OIDC provider |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

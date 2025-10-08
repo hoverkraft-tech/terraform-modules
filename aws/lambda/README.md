@@ -2,7 +2,7 @@
 
 A skeleton to start your own modules.
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -59,4 +59,4 @@ No modules.
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | n/a |
 | <a name="output_qualified_arn"></a> [qualified\_arn](#output\_qualified\_arn) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

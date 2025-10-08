@@ -1,7 +1,7 @@
 # OVH PCI private subnet
 
 Create a subnet in OVH PCI (openstack)
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -47,4 +47,4 @@ No modules.
 | <a name="output_gateway_ip"></a> [gateway\_ip](#output\_gateway\_ip) | n/a |
 | <a name="output_id"></a> [id](#output\_id) | n/a |
 | <a name="output_network_id"></a> [network\_id](#output\_network\_id) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

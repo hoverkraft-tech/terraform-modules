@@ -2,7 +2,7 @@
 
 Create a secret in kubernetes
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -50,4 +50,4 @@ No modules.
 |------|-------------|
 | <a name="output_name"></a> [name](#output\_name) | The name of the Kubernetes secret |
 | <a name="output_namespace"></a> [namespace](#output\_namespace) | The namespace of the Kubernetes secret |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

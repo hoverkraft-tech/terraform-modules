@@ -28,7 +28,7 @@ provider "github" {
 }
 ```
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -106,4 +106,4 @@ No modules.
 | <a name="output_repository_node_id"></a> [repository\_node\_id](#output\_repository\_node\_id) | The Node ID of the repository. |
 | <a name="output_repository_ssh_clone_url"></a> [repository\_ssh\_clone\_url](#output\_repository\_ssh\_clone\_url) | URL that can be provided to git clone to clone the repository via SSH. |
 | <a name="output_repository_visibility"></a> [repository\_visibility](#output\_repository\_visibility) | The visibility of the repository. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

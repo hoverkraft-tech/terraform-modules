@@ -1,7 +1,7 @@
 # aws cloudfront-distribution
 
 Creates a CloudFront distribution.
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -61,4 +61,4 @@ No modules.
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | ARN of the cloudfront distribution |
 | <a name="output_domain_name"></a> [domain\_name](#output\_domain\_name) | Domain name of the cloudfront distribution |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

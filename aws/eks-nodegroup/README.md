@@ -2,7 +2,7 @@
 
 Create an EKS nodegroup in AWS
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -66,4 +66,4 @@ No modules.
 | <a name="output_id"></a> [id](#output\_id) | ID of the created EKS nodegroup |
 | <a name="output_name"></a> [name](#output\_name) | Name of the created EKS nodegroup |
 | <a name="output_status"></a> [status](#output\_status) | Status of the created EKS nodegroup |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

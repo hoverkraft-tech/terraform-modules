@@ -1,7 +1,7 @@
 # AWS S3 bucket policy
 
 This module creates a S3 bucket policy
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -45,4 +45,4 @@ No modules.
 |------|-------------|
 | <a name="output_website_domain"></a> [website\_domain](#output\_website\_domain) | The domain name of the website endpoint |
 | <a name="output_website_endpoint"></a> [website\_endpoint](#output\_website\_endpoint) | The website endpoint URL |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

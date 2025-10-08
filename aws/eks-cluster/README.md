@@ -2,7 +2,7 @@
 
 Create an EKS cluster in AWS
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -62,4 +62,4 @@ No modules.
 | <a name="output_oidc_issuer_url"></a> [oidc\_issuer\_url](#output\_oidc\_issuer\_url) | The OIDC issuer URL of the EKS cluster |
 | <a name="output_security_group_id"></a> [security\_group\_id](#output\_security\_group\_id) | The security group ID of the EKS cluster |
 | <a name="output_sha1_fingerprint"></a> [sha1\_fingerprint](#output\_sha1\_fingerprint) | The SHA1 fingerprint of the EKS cluster |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

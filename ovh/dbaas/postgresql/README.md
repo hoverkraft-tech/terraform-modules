@@ -2,7 +2,7 @@
 
 Create a OVH managed database instance (postgresql engine only).
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -57,4 +57,4 @@ No modules.
 | <a name="output_nodes"></a> [nodes](#output\_nodes) | n/a |
 | <a name="output_status"></a> [status](#output\_status) | n/a |
 | <a name="output_users"></a> [users](#output\_users) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

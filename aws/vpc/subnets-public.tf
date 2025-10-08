@@ -1,4 +1,6 @@
+#trivy:ignore:AVD-AWS-0164 public subnets need to assign public IPs by design
 resource "aws_subnet" "pub_subnet" {
+  #checkov:skip=CKV_AWS_130:public subnets need to assign public IPs by design
   count                   = length(var.availability_zones)
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = var.public_subnets[var.availability_zones[count.index]].cidr

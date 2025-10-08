@@ -2,7 +2,7 @@
 
 Create an IAM service linked role and manage its attached policies
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -46,4 +46,4 @@ No modules.
 | <a name="output_arn"></a> [arn](#output\_arn) | AWS IAM role arn |
 | <a name="output_name"></a> [name](#output\_name) | AWS IAM role name |
 | <a name="output_unique_id"></a> [unique\_id](#output\_unique\_id) | AWS IAM role unique ID |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

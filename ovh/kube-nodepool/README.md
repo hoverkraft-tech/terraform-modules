@@ -2,7 +2,7 @@
 
 Create an OVH managed Kubernetes nodepool
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -52,4 +52,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_available_nodes"></a> [available\_nodes](#output\_available\_nodes) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

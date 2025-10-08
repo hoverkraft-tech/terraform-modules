@@ -2,7 +2,7 @@
 
 Create a new ssh keypair and uplaod it to aws
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -44,4 +44,4 @@ No modules.
 |------|-------------|
 | <a name="output_key_name"></a> [key\_name](#output\_key\_name) | name of the ssh keypair uploaded |
 | <a name="output_ssh_key_fingerprint"></a> [ssh\_key\_fingerprint](#output\_ssh\_key\_fingerprint) | fingerprint of the ssh keypair uploaded |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
