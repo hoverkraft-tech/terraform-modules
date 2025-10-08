@@ -29,6 +29,7 @@ resource "aws_s3_bucket_public_access_block" "bucket_public_access" {
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
+  count  = var.sse_enabled == true ? 1 : 0
   bucket = aws_s3_bucket.bucket.id
 
   rule {
@@ -40,6 +41,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
+  count  = var.versioning_enabled == true ? 1 : 0
   bucket = aws_s3_bucket.bucket.id
   versioning_configuration {
     status = "Enabled"
@@ -48,6 +50,7 @@ resource "aws_s3_bucket_versioning" "versioning" {
 
 resource "aws_s3_bucket_ownership_controls" "default" {
   #checkov:skip=CKV2_AWS_65:this is up to the user
+  count  = var.object_ownership != null ? 1 : 0
   bucket = aws_s3_bucket.bucket.id
   rule {
     object_ownership = var.object_ownership
