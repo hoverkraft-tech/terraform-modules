@@ -17,7 +17,13 @@ variable "tags" {
 
 # module specific variables
 variable "labels" {
-  description = "Labels to add to the secret"
+  description = "Labels to add to the namespace"
+  type        = map(any)
+  default     = {}
+}
+
+variable "annotations" {
+  description = "Annotations to add to the namespace"
   type        = map(any)
   default     = {}
 }
@@ -32,4 +38,10 @@ variable "config_context" {
   description = "The context to use for the kubernetes provider"
   type        = string
   default     = null
+}
+
+variable "ignore_metadata_changes" {
+  description = "Ignore changes to metadata labels and annotations when they are modified externally (e.g., by Rancher)"
+  type        = bool
+  default     = false
 }
