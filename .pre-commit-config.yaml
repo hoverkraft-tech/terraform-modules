@@ -19,8 +19,49 @@ repos:
       #   args: [--branch, main]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.101.0
+    rev: v1.101.1
     hooks:
+      - id: tfupdate
+        name: Autoupdate Terraform versions
+        args:
+          - --args=terraform --version "~> 1.3"
+      - id: tfupdate
+        name: Autoupdate Terraform versions (local provider)
+        args:
+          - --args=provider hashicorp/local
+          - --args=--version '>= 2.5.0, <3.0.0'
+      - id: tfupdate
+        name: Autoupdate Terraform versions (kubernetes provider)
+        args:
+          - --args=provider hashicorp/kubernetes
+          - --args=--version '>= 2.38.0, <3.0.0'
+      - id: tfupdate
+        name: Autoupdate Terraform versions (random provider)
+        args:
+          - --args=provider hashicorp/random
+          - --args=--version '>= 3.4.0, <4.0.0'
+      - id: tfupdate
+        name: Autoupdate Terraform versions (time provider)
+        args:
+          - --args=provider hashicorp/time
+          - --args=--version '>= 0.13.1, <1.0.0'
+      - id: tfupdate
+        name: Autoupdate Terraform versions (tls provider)
+        args:
+          - --args=provider hashicorp/tls
+          - --args=--version '>= 4.1.0, <5.0.0'
+      - id: tfupdate
+        name: Autoupdate aws provider versions
+        args:
+          - --args=provider aws --version ">= 4.67.0, < 5.0.0"
+      - id: tfupdate
+        name: Autoupdate helm provider versions
+        args:
+          - --args=provider helm --version ">= 3.0.0, < 4.0.0"
+      - id: tfupdate
+        name: Autoupdate pass provider versions
+        args:
+          - --args=provider mecodia/pass --version ">= 3.1.0, < 4.0.0"
       # This hook is configured to run only in manual stage to avoid unnecessary provider lock file updates on every commit.
       # Run this hook manually when you need to update the provider lock file across all supported platforms.
       - id: terraform_providers_lock
@@ -37,22 +78,6 @@ repos:
           - --hook-config=--parallelism-limit=1
           - --hook-config=--retry-once-with-cleanup=true
           - --tf-init-args=-reconfigure
-      - id: tfupdate
-        name: Autoupdate Terraform versions
-        args:
-          - --args=terraform --version "~> 1.3"
-      - id: tfupdate
-        name: Autoupdate aws provider versions
-        args:
-          - --args=provider aws --version ">= 4.30.0, < 5.0.0"
-      - id: tfupdate
-        name: Autoupdate helm provider versions
-        args:
-          - --args=provider helm --version ">= 2.8.0, < 3.0.0"
-      - id: tfupdate
-        name: Autoupdate pass provider versions
-        args:
-          - --args=provider mecodia/pass --version ">= 3.1.0, < 4.0.0"
       - id: terraform_fmt
       - id: terraform_docs
         args:
