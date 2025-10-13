@@ -161,7 +161,7 @@ Navigate to any module directory to view its documentation.
 ## 📦 Available Modules
 
 <details>
-<summary><b>View full module list (50+ modules)</b></summary>
+<summary><b>View all available modules</b></summary>
 
 ### AWS Modules
 - [acm-certificate](./aws/acm-certificate)
