@@ -1,6 +1,6 @@
 # ssh_key_pair module
 
-Create a new ssh keypair and uplaod it to aws
+Create a new ssh keypair and upload it to aws
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -8,14 +8,14 @@ Create a new ssh keypair and uplaod it to aws
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.30.0, < 5.0.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.67.0, < 5.0.0 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.30.0, < 5.0.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.67.0, < 5.0.0 |
 | <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
 
 ## Modules

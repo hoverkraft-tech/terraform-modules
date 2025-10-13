@@ -1,6 +1,6 @@
 # OVH ssh-key-pair module
 
-Create a new ssh keypair and uplaod it to ovh
+Create a new ssh keypair and upload it to ovh
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
