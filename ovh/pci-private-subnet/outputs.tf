@@ -1,11 +1,11 @@
 output "id" {
-  value = openstack_networking_subnet_v2.subnet.id
+  value = ovh_cloud_project_network_private_subnet.subnet.id
 }
 
 output "network_id" {
-  value = openstack_networking_subnet_v2.subnet.network_id
+  value = ovh_cloud_project_network_private_subnet.subnet.network_id
 }
 
 output "gateway_ip" {
-  value = openstack_networking_subnet_v2.subnet.gateway_ip
+  value = ovh_cloud_project_network_private_subnet.subnet.gateway_ip
 }

@@ -18,23 +18,44 @@ variable "tags" {
 }
 
 # bellow are specific modules variables
+variable "cloud_project_id" {
+  description = "OVH service name"
+  type        = string
+}
+
 variable "network_id" {
   type        = string
-  description = "OVH vrack network id"
+  description = "ID of the private network"
 }
 
-variable "ip" {
-  type        = map(any)
-  description = "map of subnet ip elements {start, end, netwok}"
-  default = {
-    start   = "10.0.0.1"
-    end     = "10.0.254.254"
-    network = "10.0.0.0/16"
-  }
+variable "region" {
+  type        = string
+  description = "array of OVH pci regions where the subnet will exists"
 }
 
-variable "dns_nameservers" {
-  type        = list(string)
-  description = "list of dns servers that will be send by dhcp on this subnet"
-  default     = ["8.8.8.8", "8.8.4.4"]
+variable "network" {
+  type        = string
+  description = "Global network in CIDR format"
+}
+
+variable "start" {
+  type        = string
+  description = "First ip for this region"
+}
+
+variable "end" {
+  type        = string
+  description = "Last ip for this region"
+}
+
+variable "dhcp" {
+  type        = string
+  description = "Enable DHCP"
+  default = true
+}
+
+variable "no_gateway" {
+  type        = string
+  description = "Set to true if you don't want to set a default gateway IP"
+  default = false
 }
