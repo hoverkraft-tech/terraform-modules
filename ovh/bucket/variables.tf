@@ -19,18 +19,30 @@ variable "tags" {
 }
 
 # bellow are specific modules variables
-variable "region" {
+variable "region_name" {
+  description = "Region (in uppercase) applied to this bucket"
   type        = string
-  description = "OVH region"
-  default     = "GRA"
 }
 
-# variable "ovh_service_name" {
-#   description = "OVH service name"
-#   type        = string
-# }
-
-variable "ovh_write_user" {
-  description = "OVH user name who will have write access to the bucket"
+variable "cloud_project_id" {
+  description = "Cloud project ID for this bucket"
   type        = string
+}
+
+variable "owner_id" {
+  description = "Container owner user ID for this bucket"
+  type        = string
+  default     = ""
+}
+
+variable "versioning_enabled" {
+  description = "A boolean that indicates whether this bucket has versioning enabled."
+  type        = bool
+  default     = true
+}
+
+variable "encryption_enabled" {
+  description = "A boolean that indicates whether this bucket has encryption enabled."
+  type        = string
+  default     = true
 }

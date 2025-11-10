@@ -8,15 +8,14 @@ Create a S3 compatible object storage bucket and policy for a user with write ac
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_openstack"></a> [openstack](#requirement\_openstack) | ~> 1.49.0 |
-| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.26.0 |
+| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 2.1 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_openstack"></a> [openstack](#provider\_openstack) | ~> 1.49.0 |
+| <a name="provider_ovh"></a> [ovh](#provider\_ovh) | ~> 2.1 |
 | <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
 
 ## Modules
@@ -27,19 +26,21 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [openstack_objectstorage_container_v1.bucket](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/objectstorage_container_v1) | resource |
+| [ovh_cloud_project_storage.storage](https://registry.terraform.io/providers/ovh/ovh/latest/docs/resources/cloud_project_storage) | resource |
 | [time_static.last_update](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/static) | resource |
-| [openstack_identity_auth_scope_v3.current](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/data-sources/identity_auth_scope_v3) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | Cloud project ID for this bucket | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
+| <a name="input_encryption_enabled"></a> [encryption\_enabled](#input\_encryption\_enabled) | A boolean that indicates whether this bucket has encryption enabled. | `string` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
-| <a name="input_ovh_write_user"></a> [ovh\_write\_user](#input\_ovh\_write\_user) | OVH user name who will have write access to the bucket | `string` | n/a | yes |
-| <a name="input_region"></a> [region](#input\_region) | OVH region | `string` | `"GRA"` | no |
+| <a name="input_owner_id"></a> [owner\_id](#input\_owner\_id) | Container owner user ID for this bucket | `string` | `""` | no |
+| <a name="input_region_name"></a> [region\_name](#input\_region\_name) | Region (in uppercase) applied to this bucket | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br>  "ManagedBy": "terraform"<br>}</pre> | no |
+| <a name="input_versioning_enabled"></a> [versioning\_enabled](#input\_versioning\_enabled) | A boolean that indicates whether this bucket has versioning enabled. | `bool` | `true` | no |
 
 ## Outputs
 

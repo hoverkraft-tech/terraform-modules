@@ -8,7 +8,7 @@ locals {
     },
     var.tags
   )
-  s3_region = lower(element(regex("(.*)[[:digit:]]?$", var.region), 0))
+  s3_region = lower(element(regex("(.*)[[:digit:]]?$", var.region_name), 0))
 }
 
 resource "time_static" "last_update" {
