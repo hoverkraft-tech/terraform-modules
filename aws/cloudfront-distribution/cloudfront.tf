@@ -67,6 +67,14 @@ resource "aws_cloudfront_distribution" "main" {
         }
       }
 
+      dynamic "function_association" {
+        for_each = try(default_cache_behavior.value.function_association, [])
+        content {
+          event_type   = try(function_association.value.event_type, null)
+          function_arn = try(function_association.value.function_arn, null)
+        }
+      }
+
       dynamic "lambda_function_association" {
         for_each = try(default_cache_behavior.value.lambda_function_association, [])
         content {
@@ -76,13 +84,6 @@ resource "aws_cloudfront_distribution" "main" {
         }
       }
 
-      dynamic "function_association" {
-        for_each = try(default_cache_behavior.value.function_association, [])
-        content {
-          event_type   = try(function_association.value.event_type, null)
-          function_arn = try(function_association.value.function_arn, null)
-        }
-      }
     }
   }
 
@@ -125,6 +126,24 @@ resource "aws_cloudfront_distribution" "main" {
           query_string = forwarded_values.value.query_string
         }
       }
+
+      dynamic "function_association" {
+        for_each = try(ordered_cache_behavior.value.function_association, [])
+        content {
+          event_type   = try(function_association.value.event_type, null)
+          function_arn = try(function_association.value.function_arn, null)
+        }
+      }
+
+      dynamic "lambda_function_association" {
+        for_each = try(ordered_cache_behavior.value.lambda_function_association, [])
+        content {
+          event_type   = try(lambda_function_association.value.event_type, null)
+          include_body = try(lambda_function_association.value.include_body, null)
+          lambda_arn   = try(lambda_function_association.value.lambda_arn, null)
+        }
+      }
+
     }
   }
 
