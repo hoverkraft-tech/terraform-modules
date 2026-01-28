@@ -75,6 +75,14 @@ resource "aws_cloudfront_distribution" "main" {
           lambda_arn   = try(lambda_function_association.value.lambda_arn, null)
         }
       }
+
+      dynamic "function_association" {
+        for_each = try(default_cache_behavior.value.function_association, [])
+        content {
+          event_type   = try(function_association.value.event_type, null)
+          function_arn = try(function_association.value.function_arn, null)
+        }
+      }
     }
   }
 
