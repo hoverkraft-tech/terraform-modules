@@ -30,7 +30,7 @@ variable "network_id" {
 
 variable "region" {
   type        = string
-  description = "array of OVH pci regions where the subnet will exists"
+  description = "OVH PCI region where the subnet will exist"
 }
 
 variable "network" {
