@@ -40,7 +40,7 @@ No modules.
 | <a name="input_network"></a> [network](#input\_network) | Global network in CIDR format | `string` | n/a | yes |
 | <a name="input_network_id"></a> [network\_id](#input\_network\_id) | ID of the private network | `string` | n/a | yes |
 | <a name="input_no_gateway"></a> [no\_gateway](#input\_no\_gateway) | Set to true if you don't want to set a default gateway IP | `bool` | `false` | no |
-| <a name="input_region"></a> [region](#input\_region) | array of OVH pci regions where the subnet will exists | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | OVH PCI region where the subnet will exist | `string` | n/a | yes |
 | <a name="input_start"></a> [start](#input\_start) | First ip for this region | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | `{}` | no |
 
