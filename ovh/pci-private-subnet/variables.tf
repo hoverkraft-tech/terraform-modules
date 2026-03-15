@@ -49,7 +49,7 @@ variable "end" {
 }
 
 variable "dhcp" {
-  type        = string
+  type        = bool
   description = "Enable DHCP"
   default = true
 }
