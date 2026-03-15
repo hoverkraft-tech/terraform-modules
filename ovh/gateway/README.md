@@ -1,6 +1,6 @@
-# OVH PCI private subnet
+# OVH PCI gateway module
 
-Create an OVH gateway
+Terraform module to create an OVH PCI gateway
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
