@@ -18,7 +18,7 @@ variable "tags" {
   }
 }
 
-# bellow are specific modules variables
+# below are specific modules variables
 variable "region_name" {
   description = "Region (in uppercase) applied to this bucket"
   type        = string
