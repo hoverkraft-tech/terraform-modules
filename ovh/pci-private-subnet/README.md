@@ -34,7 +34,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | OVH service name | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
-| <a name="input_dhcp"></a> [dhcp](#input\_dhcp) | Enable DHCP | `string` | `true` | no |
+| <a name="input_dhcp"></a> [dhcp](#input\_dhcp) | Enable DHCP | `bool` | `true` | no |
 | <a name="input_end"></a> [end](#input\_end) | Last ip for this region | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_network"></a> [network](#input\_network) | Global network in CIDR format | `string` | n/a | yes |
