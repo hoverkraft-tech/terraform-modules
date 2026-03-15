@@ -43,6 +43,6 @@ variable "versioning_enabled" {
 
 variable "encryption_enabled" {
   description = "A boolean that indicates whether this bucket has encryption enabled."
-  type        = string
+  type        = bool
   default     = true
 }
