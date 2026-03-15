@@ -35,7 +35,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloud_project_id"></a> [cloud\_project\_id](#input\_cloud\_project\_id) | Cloud project ID for this bucket | `string` | n/a | yes |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer applied to this instance | `string` | `""` | no |
-| <a name="input_encryption_enabled"></a> [encryption\_enabled](#input\_encryption\_enabled) | A boolean that indicates whether this bucket has encryption enabled. | `string` | `true` | no |
+| <a name="input_encryption_enabled"></a> [encryption\_enabled](#input\_encryption\_enabled) | A boolean that indicates whether this bucket has encryption enabled. | `bool` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_owner_id"></a> [owner\_id](#input\_owner\_id) | Container owner user ID for this bucket | `string` | `""` | no |
 | <a name="input_region_name"></a> [region\_name](#input\_region\_name) | Region (in uppercase) applied to this bucket | `string` | n/a | yes |
