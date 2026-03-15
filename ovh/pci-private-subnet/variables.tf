@@ -55,7 +55,7 @@ variable "dhcp" {
 }
 
 variable "no_gateway" {
-  type        = string
+  type        = bool
   description = "Set to true if you don't want to set a default gateway IP"
   default = false
 }
