@@ -16,7 +16,7 @@ variable "tags" {
   default     = {}
 }
 
-# bellow are specific modules variables
+# below are specific modules variables
 variable "cloud_project_id" {
   description = "The OVH public cloud project id"
   type        = string
