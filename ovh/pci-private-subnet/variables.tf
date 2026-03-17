@@ -51,11 +51,11 @@ variable "end" {
 variable "dhcp" {
   type        = bool
   description = "Enable DHCP"
-  default = true
+  default     = true
 }
 
 variable "no_gateway" {
   type        = bool
   description = "Set to true if you don't want to set a default gateway IP"
-  default = false
+  default     = false
 }

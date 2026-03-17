@@ -19,6 +19,6 @@ updates:
       day: friday
       time: '04:30'
     groups:
-      github-actions-dependencies:
+      terraform-dependencies:
         patterns:
           - '*'
