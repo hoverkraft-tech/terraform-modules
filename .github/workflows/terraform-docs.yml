@@ -1,0 +1,39 @@
+name: Generate Terraform Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.tf"
+  pull_request:
+    paths:
+      - "**/*.tf"
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Render terraform docs
+        uses: terraform-docs/gh-actions@v1
+        with:
+          recursive: "true"
+          recursive-path: .
+          output-file: README.md
+          output-method: inject
+          args: --lockfile=false
+          git-push: "true"
+          git-commit-message: "chore: update terraform docs"
+          git-push-user-name: github-actions[bot]
+          git-push-user-email: 41898282+github-actions[bot]@users.noreply.github.com
