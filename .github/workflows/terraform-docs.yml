@@ -28,8 +28,7 @@ jobs:
       - name: Render terraform docs
         uses: terraform-docs/gh-actions@v1
         with:
-          recursive: "true"
-          recursive-path: .
+          find-dir: .
           output-file: README.md
           output-method: inject
           args: --lockfile=false
