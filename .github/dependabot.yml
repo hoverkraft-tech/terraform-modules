@@ -30,7 +30,7 @@ updates:
   - package-ecosystem: "terraform"
     open-pull-requests-limit: 20
     directories:
-      - "**/providers.tf"
+      - "ovh/*/providers.tf"
     schedule:
       interval: "weekly"
       day: "friday"
