@@ -42,7 +42,7 @@ No modules.
 | <a name="input_ip_family"></a> [ip\_family](#input\_ip\_family) | The IP address type for the cluster control plane | `string` | `"ipv4"` | no |
 | <a name="input_k8s_version"></a> [k8s\_version](#input\_k8s\_version) | The version of kubernetes to use | `string` | `"1.32"` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the launch template | `string` | n/a | yes |
-| <a name="input_public_access_cidrs"></a> [public\_access\_cidrs](#input\_public\_access\_cidrs) | List of CIDR blocks to allow access to the public endpoint | `list(string)` | <pre>[<br>  "0.0.0.0/0"<br>]</pre> | no |
+| <a name="input_public_access_cidrs"></a> [public\_access\_cidrs](#input\_public\_access\_cidrs) | List of CIDR blocks to allow access to the public endpoint | `list(string)` | <pre>[<br/>  "0.0.0.0/0"<br/>]</pre> | no |
 | <a name="input_role_arn"></a> [role\_arn](#input\_role\_arn) | The role used by EKS control plane to make calls to AWS API on your behalf | `string` | n/a | yes |
 | <a name="input_security_group_ids"></a> [security\_group\_ids](#input\_security\_group\_ids) | List of security group IDs to attach to the EKS cluster | `list(string)` | `[]` | no |
 | <a name="input_service_ipv4_cidr"></a> [service\_ipv4\_cidr](#input\_service\_ipv4\_cidr) | The CIDR block that Kubernetes service IP addresses are assigned from | `string` | `"10.43.0.0/16"` | no |

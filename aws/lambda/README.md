@@ -35,7 +35,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_code_signing_config_arn"></a> [code\_signing\_config\_arn](#input\_code\_signing\_config\_arn) | The ARN of the code signing configuration | `string` | `null` | no |
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
-| <a name="input_dead_letter_config"></a> [dead\_letter\_config](#input\_dead\_letter\_config) | List of dead letter configuration blocks | <pre>object({<br>    target_arn = string<br>  })</pre> | `null` | no |
+| <a name="input_dead_letter_config"></a> [dead\_letter\_config](#input\_dead\_letter\_config) | List of dead letter configuration blocks | <pre>object({<br/>    target_arn = string<br/>  })</pre> | `null` | no |
 | <a name="input_env_vars"></a> [env\_vars](#input\_env\_vars) | A map that defines environment variables for the Lambda function | `map(string)` | `{}` | no |
 | <a name="input_filename"></a> [filename](#input\_filename) | The path to the function's deployment package within the local filesystem | `string` | `""` | no |
 | <a name="input_handler"></a> [handler](#input\_handler) | The function within your code that Lambda calls to begin execution | `string` | `"lambda_function.lambda_handler"` | no |
@@ -51,7 +51,7 @@ No modules.
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
 | <a name="input_timeout"></a> [timeout](#input\_timeout) | The amount of time that Lambda allows a function to run before stopping it | `number` | `3` | no |
 | <a name="input_tracing_config_mode"></a> [tracing\_config\_mode](#input\_tracing\_config\_mode) | The tracing mode for the function | `string` | `"PassThrough"` | no |
-| <a name="input_vpc_config"></a> [vpc\_config](#input\_vpc\_config) | List of VPC configuration blocks | <pre>object({<br>    security_group_ids = list(string)<br>    subnet_ids         = list(string)<br>  })</pre> | `null` | no |
+| <a name="input_vpc_config"></a> [vpc\_config](#input\_vpc\_config) | List of VPC configuration blocks | <pre>object({<br/>    security_group_ids = list(string)<br/>    subnet_ids         = list(string)<br/>  })</pre> | `null` | no |
 
 ## Outputs
 

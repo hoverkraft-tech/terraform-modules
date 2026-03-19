@@ -39,7 +39,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_owner_id"></a> [owner\_id](#input\_owner\_id) | Container owner user ID for this bucket | `string` | `""` | no |
 | <a name="input_region_name"></a> [region\_name](#input\_region\_name) | Region (in uppercase) applied to this bucket | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br>  "ManagedBy": "terraform"<br>}</pre> | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br/>  "ManagedBy": "terraform"<br/>}</pre> | no |
 | <a name="input_versioning_enabled"></a> [versioning\_enabled](#input\_versioning\_enabled) | A boolean that indicates whether this bucket has versioning enabled. | `bool` | `true` | no |
 
 ## Outputs

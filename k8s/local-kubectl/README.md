@@ -32,7 +32,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_always_run"></a> [always\_run](#input\_always\_run) | Always run the task, even if the pipeline has already been run | `bool` | `false` | no |
-| <a name="input_commands"></a> [commands](#input\_commands) | Arguments to pass to the kubectl command | `list(string)` | <pre>[<br>  "get namespaces"<br>]</pre> | no |
+| <a name="input_commands"></a> [commands](#input\_commands) | Arguments to pass to the kubectl command | `list(string)` | <pre>[<br/>  "get namespaces"<br/>]</pre> | no |
 | <a name="input_kubeconfig"></a> [kubeconfig](#input\_kubeconfig) | Kubeconfig file for the cluster | `string` | `"~/.kube/config"` | no |
 | <a name="input_logfile"></a> [logfile](#input\_logfile) | File to write the output of the kubectl command to | `string` | `"/tmp/tf_kubectl_cmds.log"` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace to run the command in (optional) | `string` | `null` | no |

@@ -42,9 +42,9 @@ No modules.
 | <a name="input_pg_allowed_ips"></a> [pg\_allowed\_ips](#input\_pg\_allowed\_ips) | IPs cidrs allowed to access the database | `list(string)` | `null` | no |
 | <a name="input_pg_databases"></a> [pg\_databases](#input\_pg\_databases) | Name of the databases to create | `list(string)` | `[]` | no |
 | <a name="input_pg_flavor"></a> [pg\_flavor](#input\_pg\_flavor) | Flavor of the database | `string` | `"db1-4"` | no |
-| <a name="input_pg_nodes"></a> [pg\_nodes](#input\_pg\_nodes) | Nodes of the database | <pre>list(object({<br>    region     = string<br>    network_id = string<br>    subnet_id  = string<br>  }))</pre> | <pre>[<br>  {<br>    "network_id": null,<br>    "region": "GRA5",<br>    "subnet_id": null<br>  }<br>]</pre> | no |
+| <a name="input_pg_nodes"></a> [pg\_nodes](#input\_pg\_nodes) | Nodes of the database | <pre>list(object({<br/>    region     = string<br/>    network_id = string<br/>    subnet_id  = string<br/>  }))</pre> | <pre>[<br/>  {<br/>    "network_id": null,<br/>    "region": "GRA5",<br/>    "subnet_id": null<br/>  }<br/>]</pre> | no |
 | <a name="input_pg_plan"></a> [pg\_plan](#input\_pg\_plan) | Plan of the database | `string` | `"essential"` | no |
-| <a name="input_pg_users"></a> [pg\_users](#input\_pg\_users) | Users of the database | <pre>list(object({<br>    name  = string<br>    roles = list(string)<br>  }))</pre> | <pre>[<br>  {<br>    "name": "root",<br>    "roles": [<br>      "admin"<br>    ]<br>  }<br>]</pre> | no |
+| <a name="input_pg_users"></a> [pg\_users](#input\_pg\_users) | Users of the database | <pre>list(object({<br/>    name  = string<br/>    roles = list(string)<br/>  }))</pre> | <pre>[<br/>  {<br/>    "name": "root",<br/>    "roles": [<br/>      "admin"<br/>    ]<br/>  }<br/>]</pre> | no |
 | <a name="input_pg_version"></a> [pg\_version](#input\_pg\_version) | Version of the database | `string` | `"14"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
 
