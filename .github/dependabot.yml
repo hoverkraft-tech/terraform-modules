@@ -27,15 +27,5 @@ updates:
         patterns:
           - "*"
 
-  - package-ecosystem: "terraform"
-    open-pull-requests-limit: 20
-    directories:
-      - "ovh/*/providers.tf"
-    schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "04:30"
-    groups:
-      terraform-dependencies:
-        patterns:
-          - "*"
+  # Terraform updates are handled by Renovate (see renovate.json)
+  # Dependabot doesn't support recursive directory scanning for monorepos
