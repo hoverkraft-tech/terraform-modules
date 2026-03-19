@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
   "schedule": [
     "before 6am on friday"
@@ -14,38 +14,54 @@
   "packageRules": [
     {
       "description": "Group all Terraform provider updates",
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-provider"],
+      "matchManagers": [
+        "terraform"
+      ],
+      "matchDatasources": [
+        "terraform-provider"
+      ],
       "groupName": "terraform-providers",
       "automerge": false
     },
     {
       "description": "Group all Terraform module updates",
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-module"],
+      "matchManagers": [
+        "terraform"
+      ],
+      "matchDatasources": [
+        "terraform-module"
+      ],
       "groupName": "terraform-modules",
       "automerge": false
     },
     {
       "description": "Pin GitHub Actions to commit SHA",
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "pinDigests": true
     },
     {
       "description": "Group all GitHub Actions updates",
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "groupName": "github-actions",
       "automerge": false
     },
     {
       "description": "Group Docker base image updates",
-      "matchManagers": ["dockerfile"],
+      "matchManagers": [
+        "dockerfile"
+      ],
       "groupName": "docker-base-images",
       "automerge": false
     },
     {
       "description": "Group devcontainer updates",
-      "matchManagers": ["devcontainer"],
+      "matchManagers": [
+        "devcontainer"
+      ],
       "groupName": "devcontainer",
       "automerge": false
     }
