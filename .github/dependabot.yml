@@ -1,24 +1,40 @@
 version: 2
+
 updates:
-  - package-ecosystem: github-actions
-    directory: /
+  - package-ecosystem: "github-actions"
     open-pull-requests-limit: 20
+    directory: "/"
     schedule:
-      interval: weekly
-      day: friday
-      time: '04:00'
+      interval: "weekly"
     groups:
       github-actions-dependencies:
         patterns:
-          - '*'
-  - package-ecosystem: terraform
-    directory: /
+          - "*"
+
+  - package-ecosystem: "devcontainers"
     open-pull-requests-limit: 20
+    directory: "/"
     schedule:
       interval: weekly
-      day: friday
-      time: '04:30'
+
+  - package-ecosystem: "docker"
+    open-pull-requests-limit: 20
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      docker-dependencies:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "terraform"
+    open-pull-requests-limit: 20
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "04:30"
     groups:
       terraform-dependencies:
         patterns:
-          - '*'
+          - "*"
