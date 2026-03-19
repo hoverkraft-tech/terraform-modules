@@ -47,7 +47,7 @@ No modules.
 | <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
 | <a name="input_database_name"></a> [database\_name](#input\_database\_name) | The name of the database to create when the DB instance is created | `string` | `null` | no |
 | <a name="input_db_parameter_group_family"></a> [db\_parameter\_group\_family](#input\_db\_parameter\_group\_family) | The family of the DB parameter group | `string` | `"aurora-mysql5.7"` | no |
-| <a name="input_db_parameter_group_parameters"></a> [db\_parameter\_group\_parameters](#input\_db\_parameter\_group\_parameters) | A list of DB parameters to apply | <pre>list(object({<br>    name  = string<br>    value = string<br>  }))</pre> | `null` | no |
+| <a name="input_db_parameter_group_parameters"></a> [db\_parameter\_group\_parameters](#input\_db\_parameter\_group\_parameters) | A list of DB parameters to apply | <pre>list(object({<br/>    name  = string<br/>    value = string<br/>  }))</pre> | `null` | no |
 | <a name="input_default_instance_class"></a> [default\_instance\_class](#input\_default\_instance\_class) | The default instance class to use for instances | `string` | `"db.t3.small"` | no |
 | <a name="input_deletion_protection"></a> [deletion\_protection](#input\_deletion\_protection) | If the DB instance should have deletion protection enabled | `bool` | `false` | no |
 | <a name="input_enabled_cloudwatch_logs_exports"></a> [enabled\_cloudwatch\_logs\_exports](#input\_enabled\_cloudwatch\_logs\_exports) | A list of log types that need to be enabled for exporting to CloudWatch Logs. Note that this is not supported on serverless engine. | `list(string)` | `null` | no |
@@ -56,7 +56,7 @@ No modules.
 | <a name="input_engine_version"></a> [engine\_version](#input\_engine\_version) | The engine version to use | `string` | `"8.0.mysql_aurora.3.02.2"` | no |
 | <a name="input_iam_database_authentication_enabled"></a> [iam\_database\_authentication\_enabled](#input\_iam\_database\_authentication\_enabled) | Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled | `bool` | `false` | no |
 | <a name="input_iam_roles"></a> [iam\_roles](#input\_iam\_roles) | A list of ARNs for the IAM roles to associate with the DB instance | `list(string)` | `null` | no |
-| <a name="input_instances"></a> [instances](#input\_instances) | A list of DB instances to create | <pre>list(object({<br>    name                = string<br>    instance_class      = string<br>    publicly_accessible = bool<br>    availability_zone   = string<br>  }))</pre> | `null` | no |
+| <a name="input_instances"></a> [instances](#input\_instances) | A list of DB instances to create | <pre>list(object({<br/>    name                = string<br/>    instance_class      = string<br/>    publicly_accessible = bool<br/>    availability_zone   = string<br/>  }))</pre> | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the launch template | `string` | n/a | yes |
 | <a name="input_password"></a> [password](#input\_password) | Password for the master DB user | `string` | `"root"` | no |
 | <a name="input_performance_insights_enabled"></a> [performance\_insights\_enabled](#input\_performance\_insights\_enabled) | Specifies whether Performance Insights is enabled | `bool` | `true` | no |

@@ -42,9 +42,9 @@ No modules.
 | <a name="input_mysql_allowed_ips"></a> [mysql\_allowed\_ips](#input\_mysql\_allowed\_ips) | IPs cidrs allowed to access the database | `list(string)` | `null` | no |
 | <a name="input_mysql_databases"></a> [mysql\_databases](#input\_mysql\_databases) | Name of the databases to create | `list(string)` | `[]` | no |
 | <a name="input_mysql_flavor"></a> [mysql\_flavor](#input\_mysql\_flavor) | Flavor of the database | `string` | `"db1-4"` | no |
-| <a name="input_mysql_nodes"></a> [mysql\_nodes](#input\_mysql\_nodes) | Nodes of the database | <pre>list(object({<br>    region     = string<br>    network_id = string<br>    subnet_id  = string<br>  }))</pre> | <pre>[<br>  {<br>    "network_id": null,<br>    "region": "GRA5",<br>    "subnet_id": null<br>  }<br>]</pre> | no |
+| <a name="input_mysql_nodes"></a> [mysql\_nodes](#input\_mysql\_nodes) | Nodes of the database | <pre>list(object({<br/>    region     = string<br/>    network_id = string<br/>    subnet_id  = string<br/>  }))</pre> | <pre>[<br/>  {<br/>    "network_id": null,<br/>    "region": "GRA5",<br/>    "subnet_id": null<br/>  }<br/>]</pre> | no |
 | <a name="input_mysql_plan"></a> [mysql\_plan](#input\_mysql\_plan) | Plan of the database | `string` | `"essential"` | no |
-| <a name="input_mysql_users"></a> [mysql\_users](#input\_mysql\_users) | Users of the database | <pre>list(object({<br>    name = string<br>  }))</pre> | <pre>[<br>  {<br>    "name": "root"<br>  }<br>]</pre> | no |
+| <a name="input_mysql_users"></a> [mysql\_users](#input\_mysql\_users) | Users of the database | <pre>list(object({<br/>    name = string<br/>  }))</pre> | <pre>[<br/>  {<br/>    "name": "root"<br/>  }<br/>]</pre> | no |
 | <a name="input_mysql_version"></a> [mysql\_version](#input\_mysql\_version) | Version of the database | `string` | `"14"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |

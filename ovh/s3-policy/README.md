@@ -38,7 +38,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Name applied to this instance | `string` | `""` | no |
 | <a name="input_ovh_user_id"></a> [ovh\_user\_id](#input\_ovh\_user\_id) | OVH user id | `string` | n/a | yes |
 | <a name="input_policy"></a> [policy](#input\_policy) | OVH user policy (json) | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br>  "ManagedBy": "terraform"<br>}</pre> | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Tags applied to this instance | `map(string)` | <pre>{<br/>  "ManagedBy": "terraform"<br/>}</pre> | no |
 
 ## Outputs
 

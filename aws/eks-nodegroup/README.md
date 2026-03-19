@@ -51,10 +51,10 @@ No modules.
 | <a name="input_node_group_name_prefix"></a> [node\_group\_name\_prefix](#input\_node\_group\_name\_prefix) | Prefix to use for generated node group names | `string` | `null` | no |
 | <a name="input_node_role_arn"></a> [node\_role\_arn](#input\_node\_role\_arn) | The ARN of the role to use for the launch template | `string` | n/a | yes |
 | <a name="input_release_version"></a> [release\_version](#input\_release\_version) | The release version to use for the launch template | `string` | `null` | no |
-| <a name="input_remote_access"></a> [remote\_access](#input\_remote\_access) | The remote access configuration to use for the launch template | <pre>object({<br>    ec2_ssh_key               = string<br>    source_security_group_ids = list(string)<br>  })</pre> | `null` | no |
+| <a name="input_remote_access"></a> [remote\_access](#input\_remote\_access) | The remote access configuration to use for the launch template | <pre>object({<br/>    ec2_ssh_key               = string<br/>    source_security_group_ids = list(string)<br/>  })</pre> | `null` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | The subnet IDs to use for the node group | `list(string)` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
-| <a name="input_taints"></a> [taints](#input\_taints) | Taints to be applied to the node group | <pre>list(object({<br>    key    = string<br>    value  = string<br>    effect = string<br>  }))</pre> | `[]` | no |
+| <a name="input_taints"></a> [taints](#input\_taints) | Taints to be applied to the node group | <pre>list(object({<br/>    key    = string<br/>    value  = string<br/>    effect = string<br/>  }))</pre> | `[]` | no |
 | <a name="input_update_max_unavailable"></a> [update\_max\_unavailable](#input\_update\_max\_unavailable) | The maximum number of nodes that can be unavailable during an update | `string` | `"1"` | no |
 | <a name="input_update_max_unavailable_percentage"></a> [update\_max\_unavailable\_percentage](#input\_update\_max\_unavailable\_percentage) | The maximum percentage of nodes that can be unavailable during an update | `number` | `null` | no |
 
