@@ -9,16 +9,16 @@ Create an EKS cluster in AWS
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.67.0, < 5.0.0 |
-| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | ~> 4.1.0 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.13.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | ~> 4.2.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.67.0, < 5.0.0 |
-| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
-| <a name="provider_tls"></a> [tls](#provider\_tls) | ~> 4.1.0 |
+| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.13.0 |
+| <a name="provider_tls"></a> [tls](#provider\_tls) | ~> 4.2.0 |
 
 ## Modules
 
