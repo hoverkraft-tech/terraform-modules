@@ -8,16 +8,16 @@ Create a secret in kubernetes
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | ~> 2.16.1 |
-| <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.2.3 |
-| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | ~> 2.38.0 |
+| <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.7.0 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.13.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | ~> 2.16.1 |
-| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | ~> 2.38.0 |
+| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.13.0 |
 
 ## Modules
 
