@@ -2,7 +2,7 @@ terraform {
   required_providers {
     ovh = {
       source  = "ovh/ovh"
-      version = "~> 0.26.0"
+      version = "~> 2.12.0"
     }
     time = {
       source  = "hashicorp/time",
