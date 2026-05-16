@@ -6,15 +6,15 @@ terraform {
   required_providers {
     local = {
       source  = "hashicorp/local"
-      version = "~> 2.2.3"
+      version = "~> 2.7.0"
     }
     time = {
       source  = "hashicorp/time"
-      version = "~> 0.9.1"
+      version = "~> 0.13.0"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.16.1"
+      version = "~> 2.38.0"
     }
   }
 }
