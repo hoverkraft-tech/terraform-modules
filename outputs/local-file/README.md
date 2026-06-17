@@ -1,0 +1,47 @@
+# local-file module
+
+A terraform module to create local files.
+Please, keep in mind that the file content will be persisted in the terraform state.
+So it's not intended to pass sensitive file content.
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
+| <a name="requirement_local"></a> [local](#requirement\_local) | >= 2.2.3, < 3.0.0 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_local"></a> [local](#provider\_local) | >= 2.2.3, < 3.0.0 |
+| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [local_file.main](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
+| [time_static.last_update](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/static) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_content"></a> [content](#input\_content) | content to be written in the local file | `string` | n/a | yes |
+| <a name="input_customer"></a> [customer](#input\_customer) | Customer for the current deployment | `string` | `""` | no |
+| <a name="input_filename"></a> [filename](#input\_filename) | full filepath to be used | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the template resource | `string` | `"my-template"` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Default tags to add to resources | `map(any)` | `{}` | no |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
