@@ -19,7 +19,7 @@ repos:
       #   args: [--branch, main]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.101.1
+    rev: v1.108.0
     hooks:
       - id: tfupdate
         name: Autoupdate Terraform versions
@@ -62,6 +62,10 @@ repos:
         name: Autoupdate pass provider versions
         args:
           - --args=provider mecodia/pass --version ">= 3.1.0, < 4.0.0"
+      - id: tfupdate
+        name: Autoupdate null provider versions
+        args:
+          - --args=provider hashicorp/null --version ">= 3.3.0, < 4.0.0"
       # This hook is configured to run only in manual stage to avoid unnecessary provider lock file updates on every commit.
       # Run this hook manually when you need to update the provider lock file across all supported platforms.
       - id: terraform_providers_lock
