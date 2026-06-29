@@ -7,17 +7,17 @@ Create a new ssh keypair and upload it to ovh
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_openstack"></a> [openstack](#requirement\_openstack) | ~> 1.49.0 |
-| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.24.0 |
-| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
+| <a name="requirement_openstack"></a> [openstack](#requirement\_openstack) | ~> 1.54.0 |
+| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.51.0 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.13.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_openstack"></a> [openstack](#provider\_openstack) | ~> 1.49.0 |
-| <a name="provider_ovh"></a> [ovh](#provider\_ovh) | ~> 0.24.0 |
-| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
+| <a name="provider_openstack"></a> [openstack](#provider\_openstack) | ~> 1.54.0 |
+| <a name="provider_ovh"></a> [ovh](#provider\_ovh) | ~> 0.51.0 |
+| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.13.0 |
 
 ## Modules
 

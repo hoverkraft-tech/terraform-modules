@@ -7,13 +7,13 @@ A skeleton to start your own modules.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.13.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
+| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.13.0 |
 
 ## Modules
 
