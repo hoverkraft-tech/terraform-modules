@@ -7,16 +7,16 @@ Create OVH s3 policy to access to OVH s3 like buckets
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_openstack"></a> [openstack](#requirement\_openstack) | ~> 1.49.0 |
-| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.24.0 |
-| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
+| <a name="requirement_openstack"></a> [openstack](#requirement\_openstack) | ~> 3.4.0 |
+| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 2.12.0 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.13.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_ovh"></a> [ovh](#provider\_ovh) | ~> 0.24.0 |
-| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
+| <a name="provider_ovh"></a> [ovh](#provider\_ovh) | ~> 2.12.0 |
+| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.13.1 |
 
 ## Modules
 

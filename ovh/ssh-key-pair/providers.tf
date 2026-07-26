@@ -6,15 +6,15 @@ terraform {
   required_providers {
     ovh = {
       source  = "ovh/ovh"
-      version = "~> 0.24.0"
+      version = "~> 2.12.0"
     }
     openstack = {
       source  = "terraform-provider-openstack/openstack"
-      version = "~> 1.49.0"
+      version = "~> 3.4.0"
     }
     time = {
       source  = "hashicorp/time",
-      version = "~> 0.9.1"
+      version = "~> 0.13.1"
     }
   }
 }
