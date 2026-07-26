@@ -16,7 +16,7 @@ If you need to update labels or annotations through Terraform after the namespac
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | ~> 2.16.1 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | ~> 3.0.0 |
 | <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.2.3 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
 
@@ -24,7 +24,7 @@ If you need to update labels or annotations through Terraform after the namespac
 
 | Name | Version |
 |------|---------|
-| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | ~> 2.16.1 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | ~> 3.0.0 |
 | <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
 
 ## Modules
