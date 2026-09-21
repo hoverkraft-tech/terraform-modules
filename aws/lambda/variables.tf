@@ -41,6 +41,12 @@ variable "handler" {
   default     = "lambda_function.lambda_handler"
 }
 
+variable "architectures" {
+  description = "The architectures for the Lambda function"
+  type        = list(string)
+  default     = ["x86_64"]
+}
+
 variable "runtime" {
   description = "The runtime environment for the Lambda function"
   type        = string
