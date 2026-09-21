@@ -8,14 +8,14 @@ A skeleton to start your own modules.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.67.0, < 5.0.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.65.0 |
 | <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.67.0, < 5.0.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.65.0 |
 | <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
 
 ## Modules
@@ -26,7 +26,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_lambda_function.function](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) | resource |
+| [aws_lambda_function.function](https://registry.terraform.io/providers/hashicorp/aws/6.65.0/docs/resources/lambda_function) | resource |
 | [time_static.last_update](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/static) | resource |
 
 ## Inputs

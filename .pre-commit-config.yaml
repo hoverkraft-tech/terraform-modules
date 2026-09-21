@@ -53,7 +53,7 @@ repos:
       - id: tfupdate
         name: Autoupdate aws provider versions
         args:
-          - --args=provider aws --version ">= 4.67.0, < 5.0.0"
+          - --args=provider aws
       - id: tfupdate
         name: Autoupdate helm provider versions
         args:
