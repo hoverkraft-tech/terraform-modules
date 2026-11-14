@@ -2,6 +2,11 @@ version: 2
 
 updates:
   - package-ecosystem: "github-actions"
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: build
+      include: scope
     open-pull-requests-limit: 20
     directory: "/"
     schedule:
@@ -12,12 +17,16 @@ updates:
           - "*"
 
   - package-ecosystem: "devcontainers"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 20
     directory: "/"
     schedule:
       interval: weekly
 
   - package-ecosystem: "docker"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 20
     directory: "/"
     schedule:
@@ -28,6 +37,8 @@ updates:
           - "*"
 
   - package-ecosystem: "terraform"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 20
     directories:
       - /ovh/**/*
