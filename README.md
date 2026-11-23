@@ -11,7 +11,7 @@
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hoverkraft-tech/terraform-modules)](https://github.com/hoverkraft-tech/terraform-modules/pulls)
 ![GitHub Verified Creator](https://img.shields.io/badge/GitHub-Verified%20Creator-4493F8?logo=github)
 
-_A comprehensive, well-tested collection of Terraform modules maintained by [hoverkraft-tech](https://github.com/hoverkraft-tech)_
+*A comprehensive, well-tested collection of Terraform modules maintained by [hoverkraft-tech](https://github.com/hoverkraft-tech)*
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Usage](#-usage) • [Modules](#-available-modules) • [Contributing](#-contributing) • [Support](#-support)
 
@@ -40,7 +40,6 @@ The current modules cover these topics:
 <td width="33%">
 
 #### Amazon Web Services (AWS)
-
 - [ACM Certificate](./aws/acm-certificate)
 - [CloudFront Distribution](./aws/cloudfront-distribution)
 - [EFS Filesystem](./aws/efs-filesystem)
@@ -58,7 +57,6 @@ The current modules cover these topics:
 <td width="33%">
 
 #### OVHcloud
-
 - [Compute Instance](./ovh/compute-instance)
 - [DBaaS](./ovh/dbaas)
 - [Kubernetes Managed](./ovh/kube-managed)
@@ -72,7 +70,6 @@ The current modules cover these topics:
 <td width="33%">
 
 #### Scaleway
-
 - [IAM Application](./scw/iam-application)
 - [IAM API Key](./scw/iam-api-key)
 - [IAM Policy](./scw/iam-policy)
@@ -84,20 +81,17 @@ The current modules cover these topics:
 </table>
 
 ### 🔐 GitHub Management
-
 - [Repository](./github/repository) – Create and manage GitHub repositories
 - [Branch Protection](./github/branch-protection) – Configure branch protection rules
 - [Repository Ruleset](./github/repository-ruleset) – Repository-wide rulesets
 
 ### 🎯 Kubernetes
-
 - [Helm Release](./k8s/helm-release) – Deploy Helm charts
 - [Namespace](./k8s/k8s-namespace) – Manage Kubernetes namespaces
 - [Secrets](./k8s/k8s-secret) – Handle Kubernetes secrets
 - [Kubeconfig](./k8s/kubeconfig) – Manage kubeconfig files
 
 ### 🔒 Secrets Management
-
 - [Password Store](./password-store) – Integration with password-store/pass
 
 ## 🚀 Quick Start
@@ -156,7 +150,6 @@ module "github_repo" {
 ### Module-Specific Documentation
 
 Each module has its own detailed `README.md` with:
-
 - 📋 Input variables
 - 📤 Output values
 - 📚 Usage examples
@@ -170,7 +163,6 @@ Navigate to any module directory to view its documentation.
 <summary><b>View all available modules</b></summary>
 
 ### AWS Modules
-
 - [acm-certificate](./aws/acm-certificate)
 - [acm-certificate-validation](./aws/acm-certificate-validation)
 - [cloudfront-distribution](./aws/cloudfront-distribution)
@@ -197,7 +189,6 @@ Navigate to any module directory to view its documentation.
 - [vpc](./aws/vpc)
 
 ### OVH Modules
-
 - [bucket](./ovh/bucket)
 - [compute-instance](./ovh/compute-instance)
 - [dbaas](./ovh/dbaas)
@@ -212,20 +203,17 @@ Navigate to any module directory to view its documentation.
 - [user](./ovh/user)
 
 ### Scaleway Modules
-
 - [bucket](./scw/bucket)
 - [iam-api-key](./scw/iam-api-key)
 - [iam-application](./scw/iam-application)
 - [iam-policy](./scw/iam-policy)
 
 ### GitHub Modules
-
 - [branch-protection](./github/branch-protection)
 - [repository](./github/repository)
 - [repository-ruleset](./github/repository-ruleset)
 
 ### Kubernetes Modules
-
 - [helm-release](./k8s/helm-release)
 - [k8s-namespace](./k8s/k8s-namespace)
 - [k8s-secret](./k8s/k8s-secret)
@@ -233,7 +221,6 @@ Navigate to any module directory to view its documentation.
 - [local-kubectl](./k8s/local-kubectl)
 
 ### Password Store Modules
-
 - [get](./password-store/get)
 - [put](./password-store/put)
 
@@ -267,13 +254,11 @@ pre-commit install -t pre-push
 ### Submitting a New Module
 
 1. **Create a branch** for your work
-
    ```bash
    git checkout -b feature/my-new-module
    ```
 
 2. **Copy the template** as a boilerplate
-
    ```bash
    cp -r _template my-provider/my-module
    ```
@@ -285,7 +270,6 @@ pre-commit install -t pre-push
    - README documentation
 
 4. **Run pre-commit checks**
-
    ```bash
    pre-commit run --all-files
    ```
@@ -300,7 +284,6 @@ pre-commit install -t pre-push
 ### Code Quality Tools
 
 Our modules are validated with:
-
 - ✅ **terraform-docs** – Auto-generates documentation
 - ✅ **tflint** – Lints Terraform code
 - ✅ **checkov** – Security and compliance scanning
@@ -330,7 +313,6 @@ Need help? Here's how to get support:
 ## 🌟 Show Your Support
 
 If you find these modules helpful, please consider:
-
 - ⭐ Starring this repository
 - 🔀 Forking for your own use
 - 📢 Sharing with others
