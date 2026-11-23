@@ -4,9 +4,14 @@
 
 **Production-ready Terraform modules for cloud infrastructure**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Terraform](https://img.shields.io/badge/Terraform-~%3E%201.3-623CE4?logo=terraform)](https://www.terraform.io/) [![GitHub Stars](https://img.shields.io/github/stars/hoverkraft-tech/terraform-modules?style=social)](https://github.com/hoverkraft-tech/terraform-modules) [![GitHub Issues](https://img.shields.io/github/issues/hoverkraft-tech/terraform-modules)](https://github.com/hoverkraft-tech/terraform-modules/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hoverkraft-tech/terraform-modules)](https://github.com/hoverkraft-tech/terraform-modules/pulls) ![GitHub Verified Creator](https://img.shields.io/badge/GitHub-Verified%20Creator-4493F8?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJyZ2IoNjgsIDE0NywgMjQ4KSI+CiAgPHBhdGggZD0ibTkuNTg1LjUyLjkyOS42OGMuMTUzLjExMi4zMzEuMTg2LjUxOC4yMTVsMS4xMzguMTc1YTIuNjc4IDIuNjc4IDAgMCAxIDIuMjQgMi4yNGwuMTc0IDEuMTM5Yy4wMjkuMTg3LjEwMy4zNjUuMjE1LjUxOGwuNjguOTI4YTIuNjc3IDIuNjc3IDAgMCAxIDAgMy4xN2wtLjY4LjkyOGExLjE3NCAxLjE3NCAwIDAgMC0uMjE1LjUxOGwtLjE3NSAxLjEzOGEyLjY3OCAyLjY3OCAwIDAgMS0yLjI0MSAyLjI0MWwtMS4xMzguMTc1YTEuMTcgMS4xNyAwIDAgMC0uNTE4LjIxNWwtLjkyOC42OGEyLjY3NyAyLjY3NyAwIDAgMS0zLjE3IDBsLS45MjgtLjY4YTEuMTc0IDEuMTc0IDAgMCAwLS41MTgtLjIxNUwzLjgzIDE0LjQxYTIuNjc4IDIuNjc4IDAgMCAxLTIuMjQtMi4yNGwtLjE3NS0xLjEzOGExLjE3IDEuMTcgMCAwIDAtLjIxNS0uNTE4bC0uNjgtLjkyOGEyLjY3NyAyLjY3NyAwIDAgMSAwLTMuMTdsLjY4LS45MjhjLjExMi0uMTUzLjE4Ni0uMzMxLjIxNS0uNTE4bC4xNzUtMS4xNGEyLjY3OCAyLjY3OCAwIDAgMSAyLjI0LTIuMjRsMS4xMzktLjE3NWMuMTg3LS4wMjkuMzY1LS4xMDMuNTE4LS4yMTVsLjkyOC0uNjhhMi42NzcgMi42NzcgMCAwIDEgMy4xNyAwWk03LjMwMyAxLjcyOGwtLjkyNy42OGEyLjY3IDIuNjcgMCAwIDEtMS4xOC40ODlsLTEuMTM3LjE3NGExLjE3OSAxLjE3OSAwIDAgMC0uOTg3Ljk4N2wtLjE3NCAxLjEzNmEyLjY3NyAyLjY3NyAwIDAgMS0uNDg5IDEuMThsLS42OC45MjhhMS4xOCAxLjE4IDAgMCAwIDAgMS4zOTRsLjY4LjkyN2MuMjU2LjM0OC40MjQuNzUzLjQ4OSAxLjE4bC4xNzQgMS4xMzdjLjA3OC41MDkuNDc4LjkwOS45ODcuOTg3bDEuMTM2LjE3NGEyLjY3IDIuNjcgMCAwIDEgMS4xOC40ODlsLjkyOC42OGMuNDE0LjMwNS45NzkuMzA1IDEuMzk0IDBsLjkyNy0uNjhhMi42NyAyLjY3IDAgMCAxIDEuMTgtLjQ4OWwxLjEzNy0uMTc0YTEuMTggMS4xOCAwIDAgMCAuOTg3LS45ODdsLjE3NC0xLjEzNmEyLjY3IDIuNjcgMCAwIDEgLjQ4OS0xLjE4bC42OC0uOTI4YTEuMTc2IDEuMTc2IDAgMCAwIDAtMS4zOTRsLS42OC0uOTI3YTIuNjg2IDIuNjg2IDAgMCAxLS40ODktMS4xOGwtLjE3NC0xLjEzN2ExLjE3OSAxLjE3OSAwIDAgMC0uOTg3LS45ODdsLTEuMTM2LS4xNzRhMi42NzcgMi42NzcgMCAwIDEtMS4xOC0uNDg5bC0uOTI4LS42OGExLjE3NiAxLjE3NiAwIDAgMC0xLjM5NCAwWk0xMS4yOCA2Ljc4bC0zLjc1IDMuNzVhLjc1Ljc1IDAgMCAxLTEuMDYgMEw0LjcyIDguNzhhLjc1MS43NTEgMCAwIDEgLjAxOC0xLjA0Mi43NTEuNzUxIDAgMCAxIDEuMDQyLS4wMThMNyA4Ljk0bDMuMjItMy4yMmEuNzUxLjc1MSAwIDAgMSAxLjA0Mi4wMTguNzUxLjc1MSAwIDAgMSAuMDE4IDEuMDQyWiI+PC9wYXRoPgo8L3N2Zz4K)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Terraform](https://img.shields.io/badge/Terraform-~%3E%201.3-623CE4?logo=terraform)](https://www.terraform.io/)
+[![GitHub Stars](https://img.shields.io/github/stars/hoverkraft-tech/terraform-modules?style=social)](https://github.com/hoverkraft-tech/terraform-modules)
+[![GitHub Issues](https://img.shields.io/github/issues/hoverkraft-tech/terraform-modules)](https://github.com/hoverkraft-tech/terraform-modules/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hoverkraft-tech/terraform-modules)](https://github.com/hoverkraft-tech/terraform-modules/pulls)
+![GitHub Verified Creator](https://img.shields.io/badge/GitHub-Verified%20Creator-4493F8?logo=github)
 
-*A comprehensive, well-tested collection of Terraform modules maintained by [hoverkraft-tech](https://github.com/hoverkraft-tech)*
+_A comprehensive, well-tested collection of Terraform modules maintained by [hoverkraft-tech](https://github.com/hoverkraft-tech)_
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Usage](#-usage) • [Modules](#-available-modules) • [Contributing](#-contributing) • [Support](#-support)
 
@@ -35,6 +40,7 @@ The current modules cover these topics:
 <td width="33%">
 
 #### Amazon Web Services (AWS)
+
 - [ACM Certificate](./aws/acm-certificate)
 - [CloudFront Distribution](./aws/cloudfront-distribution)
 - [EFS Filesystem](./aws/efs-filesystem)
@@ -52,6 +58,7 @@ The current modules cover these topics:
 <td width="33%">
 
 #### OVHcloud
+
 - [Compute Instance](./ovh/compute-instance)
 - [DBaaS](./ovh/dbaas)
 - [Kubernetes Managed](./ovh/kube-managed)
@@ -65,6 +72,7 @@ The current modules cover these topics:
 <td width="33%">
 
 #### Scaleway
+
 - [IAM Application](./scw/iam-application)
 - [IAM API Key](./scw/iam-api-key)
 - [IAM Policy](./scw/iam-policy)
@@ -76,17 +84,20 @@ The current modules cover these topics:
 </table>
 
 ### 🔐 GitHub Management
+
 - [Repository](./github/repository) – Create and manage GitHub repositories
 - [Branch Protection](./github/branch-protection) – Configure branch protection rules
 - [Repository Ruleset](./github/repository-ruleset) – Repository-wide rulesets
 
 ### 🎯 Kubernetes
+
 - [Helm Release](./k8s/helm-release) – Deploy Helm charts
 - [Namespace](./k8s/k8s-namespace) – Manage Kubernetes namespaces
 - [Secrets](./k8s/k8s-secret) – Handle Kubernetes secrets
 - [Kubeconfig](./k8s/kubeconfig) – Manage kubeconfig files
 
 ### 🔒 Secrets Management
+
 - [Password Store](./password-store) – Integration with password-store/pass
 
 ## 🚀 Quick Start
@@ -145,6 +156,7 @@ module "github_repo" {
 ### Module-Specific Documentation
 
 Each module has its own detailed `README.md` with:
+
 - 📋 Input variables
 - 📤 Output values
 - 📚 Usage examples
@@ -158,6 +170,7 @@ Navigate to any module directory to view its documentation.
 <summary><b>View all available modules</b></summary>
 
 ### AWS Modules
+
 - [acm-certificate](./aws/acm-certificate)
 - [acm-certificate-validation](./aws/acm-certificate-validation)
 - [cloudfront-distribution](./aws/cloudfront-distribution)
@@ -184,6 +197,7 @@ Navigate to any module directory to view its documentation.
 - [vpc](./aws/vpc)
 
 ### OVH Modules
+
 - [bucket](./ovh/bucket)
 - [compute-instance](./ovh/compute-instance)
 - [dbaas](./ovh/dbaas)
@@ -198,17 +212,20 @@ Navigate to any module directory to view its documentation.
 - [user](./ovh/user)
 
 ### Scaleway Modules
+
 - [bucket](./scw/bucket)
 - [iam-api-key](./scw/iam-api-key)
 - [iam-application](./scw/iam-application)
 - [iam-policy](./scw/iam-policy)
 
 ### GitHub Modules
+
 - [branch-protection](./github/branch-protection)
 - [repository](./github/repository)
 - [repository-ruleset](./github/repository-ruleset)
 
 ### Kubernetes Modules
+
 - [helm-release](./k8s/helm-release)
 - [k8s-namespace](./k8s/k8s-namespace)
 - [k8s-secret](./k8s/k8s-secret)
@@ -216,6 +233,7 @@ Navigate to any module directory to view its documentation.
 - [local-kubectl](./k8s/local-kubectl)
 
 ### Password Store Modules
+
 - [get](./password-store/get)
 - [put](./password-store/put)
 
@@ -249,11 +267,13 @@ pre-commit install -t pre-push
 ### Submitting a New Module
 
 1. **Create a branch** for your work
+
    ```bash
    git checkout -b feature/my-new-module
    ```
 
 2. **Copy the template** as a boilerplate
+
    ```bash
    cp -r _template my-provider/my-module
    ```
@@ -265,6 +285,7 @@ pre-commit install -t pre-push
    - README documentation
 
 4. **Run pre-commit checks**
+
    ```bash
    pre-commit run --all-files
    ```
@@ -279,6 +300,7 @@ pre-commit install -t pre-push
 ### Code Quality Tools
 
 Our modules are validated with:
+
 - ✅ **terraform-docs** – Auto-generates documentation
 - ✅ **tflint** – Lints Terraform code
 - ✅ **checkov** – Security and compliance scanning
@@ -308,6 +330,7 @@ Need help? Here's how to get support:
 ## 🌟 Show Your Support
 
 If you find these modules helpful, please consider:
+
 - ⭐ Starring this repository
 - 🔀 Forking for your own use
 - 📢 Sharing with others
