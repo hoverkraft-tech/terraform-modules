@@ -1,0 +1,13 @@
+name: Shared - Validate Terraform modules
+
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  validate:
+    # TODO: Use a release containing https://github.com/hoverkraft-tech/ci-github-iac/pull/46.
+    uses: hoverkraft-tech/ci-github-iac/.github/workflows/terraform-ci.yml@082a2112ab700b7d0a483f700c31a4cefb550596 # PR #46 (unreleased)
+    permissions:
+      contents: read

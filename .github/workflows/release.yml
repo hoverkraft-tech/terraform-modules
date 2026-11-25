@@ -1,0 +1,55 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    # checkov:skip=CKV_GHA_7:Force only bypasses change detection; validation and publication settings remain fixed.
+    inputs:
+      force:
+        description: Release even without changes
+        type: boolean
+        default: false
+  schedule:
+    - cron: "25 8 * * 1"
+
+permissions: {}
+
+concurrency:
+  group: release-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    if: github.ref_type == 'branch' && github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      should-release: ${{ steps.plan.outputs.should-release }}
+      tag: ${{ steps.plan.outputs.tag }}
+    steps:
+      - id: plan
+        uses: hoverkraft-tech/ci-github-publish/actions/release/plan@bf24f894f60a3def62a8750f3964d05acb052c11 # 3.1.2
+        with:
+          target-ref: ${{ github.sha }}
+          force: ${{ github.event_name == 'workflow_dispatch' && inputs.force }}
+
+  validate:
+    needs: plan
+    if: needs.plan.outputs.should-release == 'true'
+    uses: $/.github/workflows/__shared-ci.yml
+    permissions:
+      contents: read
+
+  release:
+    needs: [plan, validate]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: hoverkraft-tech/ci-github-publish/actions/release/create@bf24f894f60a3def62a8750f3964d05acb052c11 # 3.1.2
+        with:
+          tag: ${{ needs.plan.outputs.tag }}
+          target-ref: ${{ github.sha }}
+          changelog-summary: ${{ secrets.CHANGELOG_SUMMARY }}
