@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   release:
-    uses: hoverkraft-tech/ci-github-publish/.github/workflows/prepare-release.yml@80fa7011b27f49f2e04a19f932d36047d17a28f2 # 3.0.7
+    uses: hoverkraft-tech/ci-github-publish/.github/workflows/prepare-release.yml@bf24f894f60a3def62a8750f3964d05acb052c11 # 3.1.2
     permissions:
       contents: read
       pull-requests: write

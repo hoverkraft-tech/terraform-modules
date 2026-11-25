@@ -7,13 +7,7 @@ permissions: {}
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    # TODO: Use a release containing https://github.com/hoverkraft-tech/ci-github-iac/pull/46.
+    uses: hoverkraft-tech/ci-github-iac/.github/workflows/terraform-ci.yml@082a2112ab700b7d0a483f700c31a4cefb550596 # PR #46 (unreleased)
     permissions:
       contents: read
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-      - uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e # v4.0.1
-      - name: Check Terraform formatting
-        run: terraform fmt -check -recursive
